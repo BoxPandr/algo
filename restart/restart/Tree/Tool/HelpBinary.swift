@@ -66,3 +66,17 @@ extension Optional where Wrapped == TreeNode{
     
 }
 
+
+
+extension Optional:CustomStringConvertible where Wrapped == TreeNode{
+    public var description: String{
+        if let n = self{
+            return n.description
+        }
+        else{
+            return "没有哦"
+        }
+    }
+    
+
+}

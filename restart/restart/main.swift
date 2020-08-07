@@ -16,4 +16,7 @@ let a = [1,2,3].toTree
 let b = [1,2,3].toTree
 
 let result = solve.isSameTree(a, b)
-print(result)
+//  print(result)
+
+
+print(a)

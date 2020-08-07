@@ -50,3 +50,39 @@ extension Array where Element == Int?{
     
 }
 
+
+
+
+extension TreeNode: CustomStringConvertible{
+    
+    public var description: String{
+         return diagram(self)
+        
+    }
+    
+    
+    
+    private func diagram(_ node: TreeNode?, _ top: String = "" , _ root: String = "", _ bottom: String = "") -> String{
+        guard let node = node else {
+            // return root + "nil\n"
+            return root + "空\n"
+        }
+        if node.left == nil && node.right == nil {
+            return root + "\(node.val)\n"
+        }
+        
+        
+        return diagram(node.right, top + " ", top + "┌──", top + "│ ") + root + "\(node.val)\n" +  diagram(node.left, bottom + "│ ", bottom + "└──", bottom + " ")
+        
+    }// diagram will recursively create a string representing the binary tree.
+    // To try it out, head back to the playground and write the following:
+    
+    
+    // 右结点 配 "┌──"
+    // 左结点 配 "└──"
+    
+    
+    
+}
+
+
