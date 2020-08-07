@@ -9,14 +9,11 @@
 import Foundation
 
 
-let solve = Solution()
+let sol = Solution()
+
+let node = [1,0,1,0,1,0,1].toTree
+
+let result = sol.sumRootToLeaf(node)
 
 
-let a = [1,2,3].toTree
-let b = [1,2,3].toTree
-
-let result = solve.isSameTree(a, b)
-//  print(result)
-
-
-print(a)
+print(result)

@@ -9,7 +9,7 @@
 import Foundation
 
 //  100
-class Solution {
+class Solution_B {
     func isSameTree(_ p: TreeNode?, _ q: TreeNode?) -> Bool {
         
         let lhs = (p == nil)
@@ -30,5 +30,22 @@ class Solution {
         }
         
         
+    }
+    
+    
+    
+    func test(){
+
+        let solve = Solution_B()
+
+
+        let a = [1,2,3].toTree
+        let b = [1,2,3].toTree
+
+        let result = solve.isSameTree(a, b)
+        //  print(result)
+
+
+        print(a)
     }
 }
