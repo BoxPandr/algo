@@ -14,16 +14,17 @@ class Solution {
     
 
     
-    func sum(node n: TreeNode?, sum above: Int) -> Int{
+    func sum(node n: TreeNode?, sum above: Int?) -> Int{
         guard let dot = n else {
             return 0
         }
+        let val = above ?? 0
         if dot.left == nil, dot.right == nil {
-            print(dot.val + above)
-            return dot.val + above
+            //  print(dot.val + val)
+            return dot.val + val
         }
         else{
-            let reduce = above * 2 + dot.val
+            let reduce = (val + dot.val) * 2
             return sum(node: dot.left, sum: reduce) + sum(node: dot.right, sum: reduce)
         }
     }
@@ -33,7 +34,30 @@ class Solution {
         guard let n = root else {
             return 0
         }
-        return sum(node: n, sum: n.val)
+        return sum(node: n, sum: nil)
 
+    }
+    
+    
+    func sumRootTo(leaf root: TreeNode?) -> Int {
+        guard let n = root else {
+            return 0
+        }
+        return dfs(leaf: n, value: 0)
+
+    }
+    
+    func dfs(leaf root: TreeNode?, value val: Int) -> Int{
+        guard let n = root else {
+            return 0
+        }
+        let reduce = val * 2 + n.val
+        if n.left == nil, n.right == nil{
+            return reduce
+        }
+        else{
+            return dfs(leaf: n.left, value: reduce) + dfs(leaf: n.right, value: reduce)
+        }
+        
     }
 }

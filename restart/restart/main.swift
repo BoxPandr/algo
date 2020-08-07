@@ -10,10 +10,12 @@ import Foundation
 
 
 let sol = Solution()
+var src = [1,0,1,0,1,0,1]
+// src = [1,0,1]
+let node = src.toTree
 
-let node = [1,0,1,0,1,0,1].toTree
-
-let result = sol.sumRootToLeaf(node)
+var result = sol.sumRootToLeaf(node)
 
 
+result = sol.sumRootTo(leaf: node)
 print(result)

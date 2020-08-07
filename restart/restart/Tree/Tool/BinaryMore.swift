@@ -11,6 +11,33 @@ import Foundation
 
 
 
+extension Array where Element == Int{
+    
+    var toTree: TreeNode?{
+        guard isEmpty == false else {
+            return nil
+        }
+        
+        var nodes = [TreeNode(self[0])]
+        var i = 0
+        while 2 * i + 1 < count {
+            let n = TreeNode(self[2 * i + 1])
+            nodes[i].left = n
+            nodes.append(n)
+    
+            if 2 * i + 2 < count{
+                let n = TreeNode(self[2 * i + 2])
+                nodes[i].right = n
+                nodes.append(n)
+            }
+            i += 1
+            
+        }
+        return nodes[0]
+    }
+    
+    
+}
 
 
 extension Array where Element == Int?{
