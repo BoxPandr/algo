@@ -12,9 +12,9 @@ import Foundation
 
 let s = Solution()
 
-var src = [1, 0, 2]
+var src = [1, 2, 3]
 
-src = [1, 2, 3]
+src = [1,2,3,4, 0,5]
 
 let node = src.toTree
 

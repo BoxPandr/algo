@@ -8,6 +8,8 @@
 
 import Foundation
 
+//  563,        Binary Tree Tilt
+
 
 class Solution {
     
@@ -19,14 +21,19 @@ class Solution {
         guard let n = root else{
             return 0
         }
-        var left = 0, right = 0
-        if let lhs = n.left{
-            left = lhs.val
-        }
-        if let rhs = n.right{
-            right = rhs.val
-        }
-        return findTilt(n.left) + findTilt(n.right) + abs(left - right)
+        return sum(n).tilt
         
+    }
+    
+    
+    
+    
+    func sum(_ root: TreeNode?) -> (sum: Int, tilt: Int) {
+        guard let n = root else{
+            return (0, 0)
+        }
+        let lhs = sum(n.left)
+        let rhs = sum(n.right)
+        return (lhs.sum + rhs.sum + n.val, abs(lhs.sum - rhs.sum) + lhs.tilt + rhs.tilt)
     }
 }
