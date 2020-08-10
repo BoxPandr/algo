@@ -10,7 +10,7 @@ import Foundation
 
 
 //  669
-class Solution {
+class Solution_D {
     
     
     // in order, 改一下 中序遍历
@@ -37,8 +37,8 @@ class Solution {
     }
     
     func test(){
-        let s = Solution()
-
+        let s = Solution_D()
+        
         var src = [1, 0, 2]
         var lhs = 1
         var rhs = 2
