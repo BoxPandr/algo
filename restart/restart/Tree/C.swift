@@ -10,7 +10,7 @@ import Foundation
 
 
 //  1022
-class Solution {
+class Solution_C {
     
 
     
@@ -38,6 +38,12 @@ class Solution {
 
     }
     
+}
+
+
+
+extension Solution_C{
+    
     
     func sumRootTo(leaf root: TreeNode?) -> Int {
         guard let n = root else {
@@ -59,5 +65,19 @@ class Solution {
             return dfs(leaf: n.left, value: reduce) + dfs(leaf: n.right, value: reduce)
         }
         
+    }
+    
+    
+    func test(){
+        let sol = Solution_C()
+        var src = [1,0,1,0,1,0,1]
+        // src = [1,0,1]
+        let node = src.toTree
+
+        var result = sol.sumRootToLeaf(node)
+
+
+        result = sol.sumRootTo(leaf: node)
+        print(result)
     }
 }
