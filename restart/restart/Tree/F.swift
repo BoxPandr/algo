@@ -72,7 +72,7 @@ class Solution {
     }
     
     
-    func isCousins(_ root: TreeNode?, _ x: Int, _ y: Int) -> Bool {
+    func isCousinsDFS(_ root: TreeNode?, _ x: Int, _ y: Int) -> Bool {
         leftR = Result(value: x)
         rightR = Result(value: y)
         dfs(tree: root, father: -1, pH: 0)
@@ -82,3 +82,68 @@ class Solution {
 
 
 // 当然，用迭代，层序遍历，也挺好
+
+
+
+
+
+extension Solution{
+    func isCousins(_ root: TreeNode?, _ x: Int, _ y: Int) -> Bool {
+        guard let n = root else {
+            return true
+        }
+        var queue = [TreeNode]()
+        queue.append(n)
+        while queue.isEmpty == false {
+            var newQueue = [TreeNode]()
+            // 同一层
+            var leftX = false
+            var leftRound = 0
+            var rightX = false
+            var rightRound = 0
+            for dot in queue{
+                if let lhs = dot.left{
+                    newQueue.append(lhs)
+                    if lhs.val == x{
+                        leftX = true
+                    }
+                    if lhs.val == y{
+                        rightX = true
+                    }
+                }
+                
+                if let rhs = dot.right{
+                    newQueue.append(rhs)
+                    if rhs.val == x{
+                        leftX = true
+                    }
+                    if rhs.val == y{
+                        rightX = true
+                    }
+                }
+                if leftX == false{
+                    leftRound += 1
+                }
+                if rightX == false{
+                    rightRound += 1
+                }
+            }
+            queue = newQueue
+            if leftX, rightX{
+                if leftRound == rightRound{
+                    return false
+                }
+                else{
+                    return true
+                }
+                
+            }
+        }
+        return false
+        
+    }
+    
+    
+    
+    
+}
