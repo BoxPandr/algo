@@ -12,12 +12,10 @@ import Foundation
 
 let s = Solution()
 
-var src = [1, 2, 3]
-
-src = [1,2,3,4, 0,5]
-
+var src = [1,2,3, nil, 4, nil ,5]
+// src = [1, 2, 4, 5, 3]
 let node = src.toTree
 
-let r = s.findTilt(node)
+let r = s.isCousins(node, 4, 5)
 
 print(r)

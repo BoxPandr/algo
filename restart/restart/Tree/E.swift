@@ -11,7 +11,7 @@ import Foundation
 //  563,        Binary Tree Tilt
 
 
-class Solution {
+class Solution_E {
     
     // 深度优先，就好了
     
@@ -35,5 +35,22 @@ class Solution {
         let lhs = sum(n.left)
         let rhs = sum(n.right)
         return (lhs.sum + rhs.sum + n.val, abs(lhs.sum - rhs.sum) + lhs.tilt + rhs.tilt)
+    }
+    
+    
+    
+    
+    func test(){
+        let s = Solution_E()
+
+        var src = [1, 2, 3]
+
+        src = [1,2,3,4, 0,5]
+
+        let node = src.toTree
+
+        let r = s.findTilt(node)
+
+        print(r)
     }
 }
