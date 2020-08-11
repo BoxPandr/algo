@@ -44,10 +44,13 @@ class Solution {
     
     // 传递，带参数，
     // 带参数，是向下的路径
+    // 带参数，是已经经历了的
     
     
-    // 归来，用返回
-    // 返回，是路径的汇总
+    
+    // 调用归来，用返回
+    // 返回调用，是路径的汇总
+    // 返回调用，是收集还没有计算到的
     func dfs(tree node: TreeNode?, father pVal: Int, pH pHeight: Int){
         guard let n = node else {
             return
@@ -76,3 +79,6 @@ class Solution {
         return (leftR?.depth == rightR?.depth) && (leftR?.parent != rightR?.parent)
     }
 }
+
+
+// 当然，用迭代，层序遍历，也挺好
