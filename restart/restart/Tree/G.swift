@@ -12,7 +12,7 @@ import Foundation
 
 //  965. Univalued Binary Tree
 
-class Solution {
+class Solution_G {
     func isUnivalTree(_ root: TreeNode?) -> Bool {
         guard let n = root else{
             return true
@@ -42,5 +42,21 @@ class Solution {
             queue = newQueue
         }
         return true
+    }
+    
+    
+    
+    
+    
+    func test(){
+        let s = Solution_G()
+
+        var src = [1,2,3, nil, 4, nil ,5]
+        // src = [1, 2, 4, 5, 3]
+        let node = src.toTree
+
+        let r = s.isUnivalTree(node)
+
+        print(r)
     }
 }

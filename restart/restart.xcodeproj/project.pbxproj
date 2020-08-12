@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		263FC4AC24DBF3BC00E1086C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263FC4AB24DBF3BC00E1086C /* main.swift */; };
+		264FA4E024E381EB00945359 /* H.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264FA4DF24E381EB00945359 /* H.swift */; };
 		2683F3FF24DCFE3B000953AC /* BinaryMore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2683F3FD24DCFE3B000953AC /* BinaryMore.swift */; };
 		2683F40024DCFE3B000953AC /* HelpBinary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2683F3FE24DCFE3B000953AC /* HelpBinary.swift */; };
 		2683F40224DCFE4B000953AC /* A.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2683F40124DCFE4B000953AC /* A.swift */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		263FC4A824DBF3BC00E1086C /* restart */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = restart; sourceTree = BUILT_PRODUCTS_DIR; };
 		263FC4AB24DBF3BC00E1086C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		264FA4DF24E381EB00945359 /* H.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H.swift; sourceTree = "<group>"; };
 		2683F3FD24DCFE3B000953AC /* BinaryMore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryMore.swift; sourceTree = "<group>"; };
 		2683F3FE24DCFE3B000953AC /* HelpBinary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpBinary.swift; sourceTree = "<group>"; };
 		2683F40124DCFE4B000953AC /* A.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				26B93FD524E13D360057AF38 /* E.swift */,
 				26C22EBC24E22C3B00330C2F /* F.swift */,
 				26B4A89E24E30C78002B6E87 /* G.swift */,
+				264FA4DF24E381EB00945359 /* H.swift */,
 				2683F3FC24DCFE3B000953AC /* Tool */,
 			);
 			path = Tree;
@@ -172,6 +175,7 @@
 				2683F3FF24DCFE3B000953AC /* BinaryMore.swift in Sources */,
 				26B4A89F24E30C78002B6E87 /* G.swift in Sources */,
 				2683F40224DCFE4B000953AC /* A.swift in Sources */,
+				264FA4E024E381EB00945359 /* H.swift in Sources */,
 				26B93FD624E13D360057AF38 /* E.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

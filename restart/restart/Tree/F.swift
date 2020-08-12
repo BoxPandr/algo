@@ -88,6 +88,9 @@ class Solution_F {
 
 
 extension Solution_F {
+    
+    //  层序遍历, 就是广度优先
+    
     func isCousins(_ root: TreeNode?, _ x: Int, _ y: Int) -> Bool {
         guard let n = root else {
             return true
