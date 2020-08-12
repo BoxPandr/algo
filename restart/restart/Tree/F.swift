@@ -9,7 +9,7 @@
 import Foundation
 
 //  993.
-class Solution {
+class Solution_F {
     
     struct Result {
         let val: Int
@@ -87,7 +87,7 @@ class Solution {
 
 
 
-extension Solution{
+extension Solution_F {
     func isCousins(_ root: TreeNode?, _ x: Int, _ y: Int) -> Bool {
         guard let n = root else {
             return true
@@ -146,4 +146,19 @@ extension Solution{
     
     
     
+    
+    
+    func test(){
+
+        let s = Solution_F()
+
+        var src = [1,2,3, nil, 4, nil ,5]
+        // src = [1, 2, 4, 5, 3]
+        let node = src.toTree
+
+        let r = s.isCousins(node, 4, 5)
+
+        print(r)
+
+    }
 }

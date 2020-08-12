@@ -16,6 +16,6 @@ var src = [1,2,3, nil, 4, nil ,5]
 // src = [1, 2, 4, 5, 3]
 let node = src.toTree
 
-let r = s.isCousins(node, 4, 5)
+let r = s.isUnivalTree(node)
 
 print(r)
