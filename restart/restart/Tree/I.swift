@@ -13,6 +13,13 @@ import Foundation
 
 class Solution {
     
+    // 递归，还能这么用
+    
+    // DFS 过程中，重塑结点的结构， 需要辅助变量
+    
+    
+    var cursor: TreeNode?
+    
     var vals = [Int]()
     
     func inOrder(node root: TreeNode?){
@@ -25,7 +32,7 @@ class Solution {
     }
     
     
-    func increasingBST(_ root: TreeNode?) -> TreeNode? {
+    func increasingBST_slow(_ root: TreeNode?) -> TreeNode? {
         guard let n = root else {
             return nil
         }
@@ -42,4 +49,41 @@ class Solution {
         }
         return result
     }
+}
+
+
+
+
+
+extension Solution{
+    
+    func increasingBST(_ root: TreeNode?) -> TreeNode? {
+        guard let n = root else {
+            return nil
+        }
+        
+        // 记住最初的位置
+        let dummy = TreeNode(-1)
+        cursor = dummy
+        dfs(tree: n)
+        return dummy.right
+        
+    }
+    
+    
+    func dfs(tree node: TreeNode?){
+        // 终止条件
+        guard let n = node else {
+            return
+        }
+        dfs(tree: n.left)
+        // 操作
+        n.left = nil
+        cursor?.right = n
+        
+        // 传递下去
+        cursor = n
+        dfs(tree: n.right)
+    }
+    
 }
