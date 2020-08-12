@@ -9,7 +9,7 @@
 import Foundation
 
 // 938
-class Solution {
+class Solution_H {
     
     var results = [Int]()
     
@@ -53,5 +53,21 @@ class Solution {
         
         
         return lhs + rhs + val
+    }
+    
+    
+    
+    func test(){
+
+        let s = Solution_H()
+
+        var src = [1,2,3, nil, 4, nil ,5]
+        // src = [1, 2, 4, 5, 3]
+        let node = src.toTree
+
+    //    let r = s.rangeSumBST(node)
+
+        print(r)
+
     }
 }
