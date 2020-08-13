@@ -12,7 +12,7 @@ import Foundation
 //  872
 
 
-class Solution {
+class Solution_J {
     
     var tempSequence = [Int]()
     
@@ -42,5 +42,23 @@ class Solution {
         }
         
         leafSequence(of: n.right)
+    }
+    
+    
+    
+    func test(){
+        let s = Solution_J()
+
+        var src = [3,5,1,6,2,9,8,nil,nil,7,4]
+
+        let node = src.toTree
+
+        src = [3,5,1,6,7,4,2,nil,nil,nil,nil,nil,nil,9,8]
+
+        let nodeRhs = src.toTree
+
+        let r = s.leafSimilar(node, nodeRhs)
+
+        print(r)
     }
 }

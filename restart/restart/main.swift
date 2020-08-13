@@ -12,14 +12,12 @@ import Foundation
 
 let s = Solution()
 
-var src = [3,5,1,6,2,9,8,nil,nil,7,4]
+var src = [90,69,nil,49,89,nil,52]
 
 let node = src.toTree
 
-src = [3,5,1,6,7,4,2,nil,nil,nil,nil,nil,nil,9,8]
+print(node)
 
-let nodeRhs = src.toTree
-
-let r = s.leafSimilar(node, nodeRhs)
+let r = s.minDiffInBST(node)
 
 print(r)
