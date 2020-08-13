@@ -12,10 +12,14 @@ import Foundation
 
 let s = Solution()
 
-var src = [5,3,6,2,4,nil ,8,1, nil, nil, nil,7,9]
-// src = [1, 2, 4, 5, 3]
+var src = [3,5,1,6,2,9,8,nil,nil,7,4]
+
 let node = src.toTree
 
-let r = s.increasingBST(node)
+src = [3,5,1,6,7,4,2,nil,nil,nil,nil,nil,nil,9,8]
+
+let nodeRhs = src.toTree
+
+let r = s.leafSimilar(node, nodeRhs)
 
 print(r)

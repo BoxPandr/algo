@@ -11,7 +11,7 @@ import Foundation
 //  897
 
 
-class Solution {
+class Solution_I {
     
     // 递归，还能这么用
     
@@ -55,7 +55,7 @@ class Solution {
 
 
 
-extension Solution{
+extension Solution_I{
     
     func increasingBST(_ root: TreeNode?) -> TreeNode? {
         guard let n = root else {
@@ -84,6 +84,21 @@ extension Solution{
         // 传递下去
         cursor = n
         dfs(tree: n.right)
+    }
+    
+    
+    
+    
+    func test(){
+        let s = Solution_I()
+
+        var src = [5,3,6,2,4,nil ,8,1, nil, nil, nil,7,9]
+        // src = [1, 2, 4, 5, 3]
+        let node = src.toTree
+
+        let r = s.increasingBST(node)
+
+        print(r)
     }
     
 }
