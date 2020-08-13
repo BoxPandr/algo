@@ -15,7 +15,13 @@ class Solution {
     
     var vals = [Int]()
     
-    func minDiffInBST(_ root: TreeNode?) -> Int {
+    
+    
+    var result = Int.max
+    var cursor = Int.max
+    
+    
+    func minDiffInBST_less(_ root: TreeNode?) -> Int {
         guard let n = root else {
             return 0
         }
@@ -41,5 +47,33 @@ class Solution {
         vals.append(n.val)
         inOrder(node: n.right)
         
+    }
+}
+
+
+
+
+extension Solution{
+    
+    
+    // 借助递归的结构，自由调整
+    
+    func minDiffInBST(_ root: TreeNode?) -> Int {
+        guard let n = root else {
+            return Int.max
+        }
+        doInOrder(node: n)
+        return result
+    }
+    
+    func doInOrder(node piece: TreeNode?){
+        guard let n = piece else {
+            return
+        }
+        doInOrder(node: n.left)
+        
+        result = min(result, abs(cursor - n.val))
+        cursor = n.val
+        doInOrder(node: n.right)
     }
 }
