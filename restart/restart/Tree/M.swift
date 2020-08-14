@@ -26,11 +26,11 @@ class Solution {
             var progress = 0
             if let lhs = part.left{
                 queue.append(lhs)
-                progress += visit(node: lhs, cursor: part.val, progress: 0)
+                progress += visit(node: lhs, cursor: part.val, progress: 1)
             }
             if let rhs = part.right{
                 queue.append(rhs)
-                progress += visit(node: rhs, cursor: part.val, progress: 0)
+                progress += visit(node: rhs, cursor: part.val, progress: 1)
             }
             result = max(result, progress)
         }
