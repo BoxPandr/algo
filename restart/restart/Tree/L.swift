@@ -12,7 +12,7 @@ import Foundation
 //  700.    Search in a Binary Search Tree
 
 
-class Solution {
+class Solution_L {
     
     
     func searchBST(_ root: TreeNode?, _ val: Int) -> TreeNode? {
@@ -34,5 +34,9 @@ class Solution {
             }
         }
         return nil
+    }
+    
+    func test(){
+        
     }
 }
