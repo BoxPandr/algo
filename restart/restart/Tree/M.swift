@@ -14,7 +14,7 @@ import Foundation
 class Solution {
 
     
-    var progress = 0
+    
     
     
     func longestUnivaluePath(_ root: TreeNode?) -> Int {
@@ -26,14 +26,14 @@ class Solution {
         queue.append(n)
         while queue.isEmpty == false {
             let part = queue.removeFirst()
-            progress = 0
+            var progress = 0
             if let lhs = part.left{
                 queue.append(lhs)
-                visit(node: lhs, cursor: part.val)
+                progress += dfs(node: lhs, cursor: part.val)
             }
             if let rhs = part.right{
                 queue.append(rhs)
-                visit(node: rhs, cursor: part.val)
+                progress += dfs(node: rhs, cursor: part.val)
             }
             result = max(result, progress)
         }
@@ -47,17 +47,11 @@ class Solution {
     
     // 转化为求深度，
     // 求的是，满足条件的深度
-    func visit(node n: TreeNode, cursor val: Int){
-        guard n.val == val else{
-            return
+    func dfs(node n: TreeNode?, cursor val: Int) -> Int{
+        guard let part = n, part.val == val else{
+            return 0
         }
-        progress += 1
-        if let lhs = n.left{
-            visit(node: lhs, cursor: val)
-        }
-        if let rhs = n.right{
-            visit(node: rhs, cursor: val)
-        }
+        return max(dfs(node: part.left, cursor: val), dfs(node: part.right, cursor: val)) + 1
     }
     
     

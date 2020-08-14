@@ -58,6 +58,15 @@ extension Solution_K{
     
     // 借助递归的结构，自由调整
     
+    
+    // 我原来以为，
+    // 更好的处理，是根据不同的情况，怎么个好办法
+    // 实际上，是弄一个模型，能够处理所有的情况
+    // 不在于所谓的个例的技巧，不在于花哨
+    // 计算机的实质
+    
+    
+    
     func minDiffInBST(_ root: TreeNode?) -> Int {
         guard let n = root else {
             return Int.max
