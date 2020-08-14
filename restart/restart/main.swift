@@ -14,6 +14,7 @@ let s = Solution()
 
 var src = [5,4,5,1,1,nil, 5]
 src = [1,nil,1,1,1,1,1,1]
+// src = [1, 4, 5, 4, 4, 5]
 let node = src.toTree
 
 print(node)
