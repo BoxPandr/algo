@@ -12,12 +12,12 @@ import Foundation
 
 let s = Solution()
 
-var src = [90,69,nil,49,89,nil,52]
+var src = [5,4,5,1,1,nil, 5]
 
 let node = src.toTree
 
 print(node)
 
-//let r = s.minDiffInBST(node)
-//
-//print(r)
+let r = s.longestUnivaluePath(node)
+
+print(r)
