@@ -12,8 +12,8 @@ import Foundation
 
 
 class Solution {
-    
-    
+
+
     func longestUnivaluePath(_ root: TreeNode?) -> Int {
         guard let n = root else {
             return 0
@@ -23,92 +23,38 @@ class Solution {
         queue.append(n)
         while queue.isEmpty == false {
             let part = queue.removeFirst()
-            result = max(result, visit(node: part))
+            var progress = 0
             if let lhs = part.left{
                 queue.append(lhs)
+                progress += visit(node: lhs, cursor: part.val, progress: 0)
             }
             if let rhs = part.right{
                 queue.append(rhs)
+                progress += visit(node: rhs, cursor: part.val, progress: 0)
             }
+            result = max(result, progress)
         }
         return result
     }
     
     
-    func visit(node n: TreeNode) -> Int{
-        var queue = [TreeNode]()
-        
-        let cursor = n.val
-        var progress = 0
-        
-        if let lhs = n.left, cursor == lhs.val{
-            progress += 1
-            queue.append(lhs)
-            while queue.isEmpty == false {
-                var newQueue = [TreeNode]()
-                var left = false
-                for piece in queue{
-                    if let lhs = piece.left, cursor == lhs.val{
-                        left = true
-                        newQueue.append(lhs)
-                    }
-                    if let rhs = piece.right, cursor == rhs.val{
-                        left = true
-                        newQueue.append(rhs)
-                    }
-                }
-                if left{
-                    progress += 1
-                }
-                queue = newQueue
-            }
+    
+    
+    // 左边 + 右边， 两条路径
+    
+    @discardableResult
+    func visit(node n: TreeNode, cursor val: Int, progress reduce: Int) -> Int{
+        guard n.val == val else{
+            return 0
         }
-        queue.removeAll()
-        if let lhs = n.left, cursor == lhs.val{
-            progress += 1
-            queue.append(lhs)
-            while queue.isEmpty == false {
-                var newQueue = [TreeNode]()
-                var right = false
-                for piece in queue{
-                    if let lhs = piece.left, cursor == lhs.val{
-                        right = true
-                        newQueue.append(lhs)
-                    }
-                    if let rhs = piece.right, cursor == rhs.val{
-                        right = true
-                        newQueue.append(rhs)
-                    }
-                }
-                if right{
-                    progress += 1
-                }
-                queue = newQueue
-            }
+        let accumulate = reduce + 1
+        if let lhs = n.left{
+            visit(node: lhs, cursor: val, progress: accumulate)
         }
-        while queue.isEmpty == false {
-            var newQueue = [TreeNode]()
-            var left = false
-            
-            for piece in queue{
-                if let lhs = piece.left, cursor == lhs.val{
-                    left = true
-                    newQueue.append(lhs)
-                }
-                if let rhs = piece.right, cursor == rhs.val{
-                    right = true
-                    newQueue.append(rhs)
-                }
-            }
-            if left{
-                progress += 1
-            }
-            if right{
-                progress += 1
-            }
-            queue = newQueue
+        if let rhs = n.right{
+            visit(node: rhs, cursor: val, progress: accumulate)
         }
-        return progress
+        return accumulate
     }
     
     
