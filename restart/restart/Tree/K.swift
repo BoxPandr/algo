@@ -11,7 +11,7 @@ import Foundation
 
 //  783
 
-class Solution {
+class Solution_K {
     
     var vals = [Int]()
     
@@ -53,7 +53,7 @@ class Solution {
 
 
 
-extension Solution{
+extension Solution_K{
     
     
     // 借助递归的结构，自由调整
@@ -75,5 +75,22 @@ extension Solution{
         result = min(result, abs(cursor - n.val))
         cursor = n.val
         doInOrder(node: n.right)
+    }
+    
+    
+    
+    
+    func test(){
+        let s = Solution_K()
+
+        var src = [90,69,nil,49,89,nil,52]
+
+        let node = src.toTree
+
+        print(node)
+
+        let r = s.minDiffInBST(node)
+
+        print(r)
     }
 }

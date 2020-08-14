@@ -18,6 +18,6 @@ let node = src.toTree
 
 print(node)
 
-let r = s.minDiffInBST(node)
-
-print(r)
+//let r = s.minDiffInBST(node)
+//
+//print(r)
