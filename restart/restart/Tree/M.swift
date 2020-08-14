@@ -16,8 +16,6 @@ class Solution {
     var result = 0
     
     
-    var cursor: (val: Int, progress: Int) = (0, 0)
-    // = [Int: Int]()
     
     
     func longestUnivaluePath(_ root: TreeNode?) -> Int {
@@ -25,38 +23,26 @@ class Solution {
             return 0
         }
         
-        cursor.val = n.val
-        dfs(node: n)
+        var queue = [TreeNode]()
+        queue.append(n)
+        while queue.isEmpty == false {
+            let piece = queue.removeLast()
+            if let lhs = piece.left{
+                queue.append(lhs)
+            }
+            if let rhs = piece.right{
+                queue.append(rhs)
+            }
+            
+        }
+        
         
         
         return result
     }
     
     
-    func dfs(node root: TreeNode){
-        
-        
-        
-        if cursor.val == root.val{
-            cursor.progress += 1
-        }
-        else{
-            cursor.val = root.val
-            result = max(result, cursor.progress)
-            cursor.progress = 0
-        }
-        
-        if let lhs = root.left{
-            dfs(node: lhs)
-        }
-        
-        if let rhs = root.right{
-            dfs(node: rhs)
-        }
-        
-        
-        
-    }
+  
     
     
     
