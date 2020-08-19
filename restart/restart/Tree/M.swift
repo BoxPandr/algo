@@ -11,7 +11,7 @@ import Foundation
 //  687. Longest Univalue Path
 
 
-class Solution {
+class Solution_m {
     
     
     var gotIt = 0
@@ -60,7 +60,7 @@ class Solution {
 
 
 
-extension Solution{
+extension Solution_m{
     
     
     
