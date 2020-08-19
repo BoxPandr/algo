@@ -85,10 +85,11 @@ extension Solution{
     func dfs(tree root: TreeNode, value val: Int) -> Int{
         var lhs = 0, rhs = 0
         if let left = root.left{
-            lhs = dfs(tree: left, value: val)
+            // 父结点的值，与子结点的值，比较
+            lhs = dfs(tree: left, value: root.val)
         }
         if let right = root.right{
-            rhs = dfs(tree: right, value: val)
+            rhs = dfs(tree: right, value: root.val)
         }
         // 这一步，是统计
         gotIt = max(gotIt, lhs + rhs)
