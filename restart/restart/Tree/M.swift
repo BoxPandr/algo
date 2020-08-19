@@ -12,12 +12,11 @@ import Foundation
 
 
 class Solution {
+    
+    
+    var gotIt = 0
 
-    
-    
-    
-    
-    func longestUnivaluePath(_ root: TreeNode?) -> Int {
+    func longestUnivaluePath_not_good(_ root: TreeNode?) -> Int {
         guard let n = root else {
             return 0
         }
@@ -52,6 +51,59 @@ class Solution {
             return 0
         }
         return max(dfs(node: part.left, cursor: val), dfs(node: part.right, cursor: val)) + 1
+    }
+    
+    
+    
+}
+
+
+
+
+extension Solution{
+    
+    
+    
+    func longestUnivaluePath(_ root: TreeNode?) -> Int {
+     
+        guard let n = root else {
+            return 0
+        }
+        dfs(tree: n, value: n.val)
+        return gotIt
+        
+    }
+    
+    
+    
+    // dfs, 全部访问一遍
+    
+    // 添加筛选条件
+    
+    
+    @discardableResult
+    func dfs(tree root: TreeNode, value val: Int) -> Int{
+        var lhs = 0, rhs = 0
+        if let left = root.left{
+            lhs = dfs(tree: left, value: val)
+        }
+        if let right = root.right{
+            rhs = dfs(tree: right, value: val)
+        }
+        // 这一步，是统计
+        gotIt = max(gotIt, lhs + rhs)
+        
+        
+        // 下一步，返回，是标记
+        if root.val == val{
+            
+            //  路径寻找，取舍，采用判断
+            
+            return max(lhs, rhs) + 1
+        }
+        else{
+            return 0
+        }
     }
     
     
