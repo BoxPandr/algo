@@ -27,14 +27,19 @@ class Solution {
         while i < queue.count{
             var j = queue.count - 1
             while i < j {
-                if queue[i] + queue[j] == k{
+                let reduce = queue[i] + queue[j]
+                switch reduce {
+                case k:
                     return true
-                }
-                else{
+                case ..<k:
                     i += 1
+                case (k + 1)...:
                     j -= 1
+                default:
+                    ()
                 }
             }
+            i += 1
         }
         return false
     }
