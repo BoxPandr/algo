@@ -12,13 +12,13 @@ import Foundation
 
 let s = Solution()
 
-var src = [5,4,5,1,1,nil, 5]
-src = [1,nil,1,1,1,1,1,1]
-src = [1, 4, 5, 4, 4, 5]
+var src = [5,3,6,2,4,nil,7]
+
 let node = src.toTree
 
 print(node)
 
-let r = s.longestUnivaluePath(node)
+let r = s.findTarget(node, 28)
 
 print(r)
+

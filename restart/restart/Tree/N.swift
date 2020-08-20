@@ -8,8 +8,12 @@
 
 import Foundation
 
+//   671
 
-class Solution {
+
+
+
+class Solution_N {
     
     
     
