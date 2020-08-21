@@ -8,8 +8,11 @@
 
 import Foundation
 
+//  637
 
-class Solution {
+
+
+class Solution_P {
     func averageOfLevels(_ root: TreeNode?) -> [Double] {
         guard let n = root else{
             return []
@@ -26,12 +29,13 @@ class Solution {
                     level.append(lhs)
                     levelVals.append(lhs.val)
                 }
-                if let rhs = part.left{
+                if let rhs = part.right{
                     level.append(rhs)
                     levelVals.append(rhs.val)
                 }
             }
             if levelVals.isEmpty == false{
+                print(levelVals)
                 let sum = levelVals.reduce(0, +)
                 let average = Double(sum)/Double(levelVals.count)
                 result.append(average)
@@ -39,5 +43,23 @@ class Solution {
             queue = level
         }
         return result
+    }
+    
+    
+    
+    func test(){
+
+        let s = Solution_P()
+
+        var src = [3,9,20,15,7]
+
+        let node = src.toTree
+
+        print(node)
+
+        let r = s.averageOfLevels(node)
+
+        print(r)
+
     }
 }

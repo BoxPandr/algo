@@ -18,7 +18,7 @@ let node = src.toTree
 
 print(node)
 
-let r = s.averageOfLevels(node)
-
-print(r)
+//let r = s.averageOfLevels(node)
+//
+//print(r)
 
