@@ -10,7 +10,7 @@ import Foundation
 
 
 
-class Solution {
+class Solution_O {
     
     
     var queue = [Int]()
@@ -53,6 +53,22 @@ class Solution {
         dfs(node: n.left)
         queue.append(n.val)
         dfs(node: n.right)
+    }
+    
+    
+    
+    func test(){
+        let s = Solution_O()
+
+        var src = [5,3,6,2,4,nil,7]
+
+        let node = src.toTree
+
+        print(node)
+
+        let r = s.findTarget(node, 28)
+
+        print(r)
     }
 }
 
