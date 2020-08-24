@@ -12,13 +12,13 @@ import Foundation
 
 let s = Solution()
 
-var src = [3,9,20,15,7]
+var src = [1,2,3,4]
 
 let node = src.toTree
 
 print(node)
 
-//let r = s.averageOfLevels(node)
-//
-//print(r)
+let r = s.tree2str(node)
+
+print(r)
 

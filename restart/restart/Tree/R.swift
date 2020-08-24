@@ -14,9 +14,33 @@ import Foundation
 
 
 class Solution {
+    
+    var result = ""
+    
     func tree2str(_ t: TreeNode?) -> String {
  
+        guard let node = t else {
+            return ""
+        }
         
-        return ""
+        inOrder(visit: node)
+        
+        
+        return result
     }
+    
+    
+    func inOrder(visit node: TreeNode?){
+        guard let n = node else {
+            return
+        }
+        result = result + "\(n.val)"
+        
+        inOrder(visit: n.left)
+        
+        inOrder(visit: n.right)
+        
+    }
+    
+    
 }
