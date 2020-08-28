@@ -13,7 +13,7 @@ import Foundation
 
 
 
-class Solution {
+class Solution_R{
     
     var result = ""
     
@@ -43,4 +43,29 @@ class Solution {
     }
     
     
+    
+    
+}
+
+
+
+extension Solution_R{
+
+    func test(){
+        let s = Solution_R()
+
+        var src = [1,2,3,4]
+
+        let node = src.toTree
+
+        print(node)
+
+        let r = s.tree2str(node)
+
+        print(r)
+
+    }
+
+
+
 }

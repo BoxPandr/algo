@@ -9,7 +9,7 @@
 import Foundation
 
 
-class Solution_0 {
+class Solution {
     func updateBoard(_ board: [[Character]], _ click: [Int]) -> [[Character]] {
         
         

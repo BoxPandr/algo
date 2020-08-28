@@ -12,13 +12,29 @@ import Foundation
 
 let s = Solution()
 
-var src = [1,2,3,4]
+//  var src = [1,2,3,4]
 
-let node = src.toTree
+//let node = src.toTree
 
-print(node)
+//print(node)
 
-let r = s.tree2str(node)
+var board: [[Character]] = [
+            ["E","E","E","E","E"],
+            ["E","E","M","E","E"],
+            ["E","E","E","E","E"],
+            ["E","E","E","E","E"]
+            ]
 
-print(r)
+
+
+var tap = [3,0]
+
+
+
+var result = s.updateBoard(board, tap)
+
+
+print(result)
+
+
 
