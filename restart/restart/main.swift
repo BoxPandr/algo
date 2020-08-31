@@ -10,12 +10,16 @@ import Foundation
 
 
 
-let s = Solution()
+let s = Solution_R()
 
-var src = [[1],[2],[3],[]]
+var src: [Int?] = [1,2,3,4]
+//  src = [1,2,3, nil , 4]
 
 
-var result = s.canVisitAllRooms(src)
+let node = src.toTree
+
+
+var result = s.tree2str(node)
 
 
 

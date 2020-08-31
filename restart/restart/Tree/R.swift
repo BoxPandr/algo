@@ -23,23 +23,32 @@ class Solution_R{
             return ""
         }
         
-        inOrder(visit: node)
-        
+        inOrder(visit: node, h: 0)
         
         return result
     }
     
     
-    func inOrder(visit node: TreeNode?){
+    func inOrder(visit node: TreeNode?, h height: Int){
         guard let n = node else {
             return
         }
-        result = result + "\(n.val)"
+        var lhs = "\(n.val)"
+        var rhs = ""
+        if height > 0{
+            lhs = "(\(n.val)"
+            rhs = ")"
+        }
+        result = result + lhs
+        if n.left == nil, n.right != nil{
+            result = result + "()"
+        }
         
-        inOrder(visit: n.left)
         
-        inOrder(visit: n.right)
+        inOrder(visit: n.left, h: height + 1)
         
+        inOrder(visit: n.right, h: height + 1)
+        result = result + rhs
     }
     
     

@@ -11,8 +11,9 @@ import Foundation
 
 //  841. 钥匙和房间
 
+//  广度优先，大法好
 
-class Solution {
+class Solution_1 {
     func canVisitAllRooms(_ rooms: [[Int]]) -> Bool {
         guard rooms.count > 1 else{
             return true
@@ -34,5 +35,20 @@ class Solution {
             }
         }
         return result.isEmpty
+    }
+    
+    
+    
+    func test(){
+        let s = Solution_1()
+
+        var src = [[1],[2],[3],[]]
+
+
+        var result = s.canVisitAllRooms(src)
+
+
+
+        print(result)
     }
 }
