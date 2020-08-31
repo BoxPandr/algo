@@ -10,17 +10,16 @@ import Foundation
 
 
 
-let s = Solution_R()
+let s = Solution()
 
-var src: [Int?] = [1,2,3,4]
-//  src = [1,2,3, nil , 4]
-
-
-let node = src.toTree
+var src: [Int?] = [1, nil ,3,2,4, nil,5,6]
 
 
-var result = s.tree2str(node)
 
+let node = src.treeN
+
+
+var result = s.postorder(node)
 
 
 print(result)

@@ -63,16 +63,18 @@ extension Solution_R{
     func test(){
         let s = Solution_R()
 
-        var src = [1,2,3,4]
+        var src: [Int?] = [1,2,3,4]
+        //  src = [1,2,3, nil , 4]
+
 
         let node = src.toTree
 
-        print(node)
 
-        let r = s.tree2str(node)
+        var result = s.tree2str(node)
 
-        print(r)
 
+
+        print(result)
     }
 
 

@@ -25,3 +25,34 @@ public class Node {
     }
 }
 
+
+extension Array where Element == Int?{
+    
+    var treeN: Node?{
+        guard isEmpty == false, let first = self[0] else {
+            return nil
+        }
+        
+        let root = Node(first)
+        var queue = [root]
+        var i = 2
+        var j = 0
+        while i < count{
+            var children = [Node]()
+            while self[i] != nil{
+                children.append(Node(self[i]!))
+                i += 1
+            }
+            queue[j].children = children
+            queue.append(contentsOf: children)
+            j += 1
+        }
+        
+        
+        
+        return root
+    }
+    
+    
+}
+
