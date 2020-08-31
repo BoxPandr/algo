@@ -11,6 +11,9 @@ import Foundation
 
 // 后序排序
 
+//  590. N-ary Tree Postorder Traversal
+
+
 class Solution_S {
     
     var result = [Int]()

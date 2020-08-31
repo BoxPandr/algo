@@ -13,14 +13,14 @@ import Foundation
 
 let s = Solution()
 
-var src: [Int?] = [1,2,2,3,4,4,3]
+var src: [Int?] = [3,9,20, nil ,nil,15,7]
+//  src = [1,2,3,4,5]
 
-src = [1,2,2,nil,3,nil,3]
 
 let node = src.toTree
 
 
-var result = s.isSymmetric(node)
+var result = s.sumOfLeftLeaves(node)
 
 print(result)
 

@@ -8,9 +8,9 @@
 
 import Foundation
 
+//  101. Symmetric Tree
 
-
-class Solution {
+class Solution_T {
     func isSymmetric(_ root: TreeNode?) -> Bool {
         guard let n = root else{
             return true
