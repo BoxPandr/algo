@@ -12,29 +12,14 @@ import Foundation
 
 let s = Solution()
 
-//  var src = [1,2,3,4]
+var src = [[1],[2],[3],[]]
 
-//let node = src.toTree
 
-//print(node)
-
-var board: [[Character]] = [
-            ["E","E","E","E","E"],
-            ["E","E","M","E","E"],
-            ["E","E","E","E","E"],
-            ["E","E","E","E","E"]
-            ]
+var result = s.canVisitAllRooms(src)
 
 
 
-var tap = [3,0]
-
-
-
-var result = s.updateBoard(board, tap)
-
-
-result.debug()
+print(result)
 
 
 

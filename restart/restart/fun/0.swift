@@ -49,7 +49,7 @@ import Foundation
 //  全部扫完，结束
 
 
-class Solution {
+class Solution_zero {
     func updateBoard(_ board: [[Character]], _ click: [Int]) -> [[Character]] {
         
         let m = board.count, n = board[0].count
@@ -120,4 +120,42 @@ class Solution {
         
         return result
     }
+}
+
+
+
+extension Solution_zero {
+    
+    
+    func test(){
+
+        let s = Solution_zero()
+
+        //  var src = [1,2,3,4]
+
+        //let node = src.toTree
+
+        //print(node)
+
+        var board: [[Character]] = [
+                    ["E","E","E","E","E"],
+                    ["E","E","M","E","E"],
+                    ["E","E","E","E","E"],
+                    ["E","E","E","E","E"]
+                    ]
+
+
+
+        var tap = [3,0]
+
+
+
+        var result = s.updateBoard(board, tap)
+
+
+        result.debug()
+
+    }
+
+
 }
