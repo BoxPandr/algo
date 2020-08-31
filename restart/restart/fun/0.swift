@@ -32,7 +32,7 @@ class Solution {
                         if i == 0, j == 0{
                             doThings = false
                         }
-                        let r = row + j, c = colume + j
+                        let r = row + i, c = colume + j
                         // 处理边缘
                         if r < 0 || r >= m || c < 0 || c >= n{
                             doThings = false
@@ -44,9 +44,9 @@ class Solution {
                 }
                 if count > 0{
                     // If it is not a 'B', stop further BFS.
-                    if let val = UnicodeScalar(count){
-                        result[row][colume] = Character(val)
-                    }
+                    let val = String(count)
+                    result[row][colume] = Character(val)
+                    
                 }
                 else {
                     // Continue BFS to adjacent cells.
@@ -57,7 +57,7 @@ class Solution {
                             if i == 0, j == 0{
                                 doThings = false
                             }
-                            let r = row + j, c = colume + j
+                            let r = row + i, c = colume + j
                             // 处理边缘
                             if r < 0 || r >= m || c < 0 || c >= n{
                                 doThings = false
@@ -71,7 +71,8 @@ class Solution {
                     }
                 }
             }
-            
+            result.debug()
+            print("\n")
         }
         
         
