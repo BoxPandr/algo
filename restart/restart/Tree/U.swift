@@ -12,7 +12,7 @@ import Foundation
 //  404. Sum of Left Leaves
 
 
-class Solution {
+class Solution_U {
     func sumOfLeftLeaves(_ root: TreeNode?) -> Int {
         
         guard let n = root else {
@@ -34,5 +34,22 @@ class Solution {
             }
         }
         return sum
+    }
+    
+    
+    
+    func test(){
+        let s = Solution_U()
+
+        var src: [Int?] = [3,9,20, nil ,nil,15,7]
+        //  src = [1,2,3,4,5]
+
+
+        let node = src.toTree
+
+
+        var result = s.sumOfLeftLeaves(node)
+
+        print(result)
     }
 }

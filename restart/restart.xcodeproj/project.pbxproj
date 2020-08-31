@@ -21,6 +21,7 @@
 		265C5DA424FCCC740036D161 /* N_Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265C5DA324FCCC740036D161 /* N_Array.swift */; };
 		265C5DA624FCF9060036D161 /* T.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265C5DA524FCF9060036D161 /* T.swift */; };
 		265C5DA824FCFE480036D161 /* U.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265C5DA724FCFE480036D161 /* U.swift */; };
+		265C5DAA24FD022A0036D161 /* V.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265C5DA924FD022A0036D161 /* V.swift */; };
 		2683F3FF24DCFE3B000953AC /* BinaryMore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2683F3FD24DCFE3B000953AC /* BinaryMore.swift */; };
 		2683F40024DCFE3B000953AC /* HelpBinary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2683F3FE24DCFE3B000953AC /* HelpBinary.swift */; };
 		2683F40224DCFE4B000953AC /* A.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2683F40124DCFE4B000953AC /* A.swift */; };
@@ -65,6 +66,7 @@
 		265C5DA324FCCC740036D161 /* N_Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = N_Array.swift; sourceTree = "<group>"; };
 		265C5DA524FCF9060036D161 /* T.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = T.swift; sourceTree = "<group>"; };
 		265C5DA724FCFE480036D161 /* U.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U.swift; sourceTree = "<group>"; };
+		265C5DA924FD022A0036D161 /* V.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V.swift; sourceTree = "<group>"; };
 		2683F3FD24DCFE3B000953AC /* BinaryMore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryMore.swift; sourceTree = "<group>"; };
 		2683F3FE24DCFE3B000953AC /* HelpBinary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpBinary.swift; sourceTree = "<group>"; };
 		2683F40124DCFE4B000953AC /* A.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				265C5DA524FCF9060036D161 /* T.swift */,
 				2683F3FC24DCFE3B000953AC /* Tool */,
 				265C5DA724FCFE480036D161 /* U.swift */,
+				265C5DA924FD022A0036D161 /* V.swift */,
 			);
 			path = Tree;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2683F40024DCFE3B000953AC /* HelpBinary.swift in Sources */,
+				265C5DAA24FD022A0036D161 /* V.swift in Sources */,
 				263F8A5124E517B8007FF803 /* K.swift in Sources */,
 				26D0531C24ED29E90066BE81 /* N.swift in Sources */,
 				265C5DA824FCFE480036D161 /* U.swift in Sources */,
