@@ -34,7 +34,7 @@ var tap = [3,0]
 var result = s.updateBoard(board, tap)
 
 
-print(result)
+result.debug()
 
 
 
