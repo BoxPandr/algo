@@ -16,6 +16,7 @@
 		264FA4E024E381EB00945359 /* H.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264FA4DF24E381EB00945359 /* H.swift */; };
 		264FA4E224E3982400945359 /* I.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264FA4E124E3982400945359 /* I.swift */; };
 		265C5D9E24FC984A0036D161 /* ArrayMore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265C5D9D24FC984A0036D161 /* ArrayMore.swift */; };
+		265C5DA024FCAC7C0036D161 /* 1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265C5D9F24FCAC7C0036D161 /* 1.swift */; };
 		2683F3FF24DCFE3B000953AC /* BinaryMore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2683F3FD24DCFE3B000953AC /* BinaryMore.swift */; };
 		2683F40024DCFE3B000953AC /* HelpBinary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2683F3FE24DCFE3B000953AC /* HelpBinary.swift */; };
 		2683F40224DCFE4B000953AC /* A.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2683F40124DCFE4B000953AC /* A.swift */; };
@@ -55,6 +56,7 @@
 		264FA4DF24E381EB00945359 /* H.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H.swift; sourceTree = "<group>"; };
 		264FA4E124E3982400945359 /* I.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = I.swift; sourceTree = "<group>"; };
 		265C5D9D24FC984A0036D161 /* ArrayMore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayMore.swift; sourceTree = "<group>"; };
+		265C5D9F24FCAC7C0036D161 /* 1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1.swift; sourceTree = "<group>"; };
 		2683F3FD24DCFE3B000953AC /* BinaryMore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryMore.swift; sourceTree = "<group>"; };
 		2683F3FE24DCFE3B000953AC /* HelpBinary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpBinary.swift; sourceTree = "<group>"; };
 		2683F40124DCFE4B000953AC /* A.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			children = (
 				265C5D9C24FC983F0036D161 /* Tool */,
 				2613654824EE730C00A7A2D5 /* 0.swift */,
+				265C5D9F24FCAC7C0036D161 /* 1.swift */,
 			);
 			path = fun;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				2683F40024DCFE3B000953AC /* HelpBinary.swift in Sources */,
 				263F8A5124E517B8007FF803 /* K.swift in Sources */,
 				26D0531C24ED29E90066BE81 /* N.swift in Sources */,
+				265C5DA024FCAC7C0036D161 /* 1.swift in Sources */,
 				2613654624EE6B6700A7A2D5 /* O.swift in Sources */,
 				2613654924EE730C00A7A2D5 /* 0.swift in Sources */,
 				26B93FD424E121750057AF38 /* D.swift in Sources */,

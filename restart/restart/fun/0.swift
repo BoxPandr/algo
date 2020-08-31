@@ -9,6 +9,46 @@
 import Foundation
 
 
+// E， 未处理的，未标记的，产生事件
+
+
+// B,  blank，没雷的， 不产生事件
+//  可中间状态， 可改变为数字
+
+// B, 不是边缘
+
+
+
+
+// 数字， 终止状态， 不产生事件
+
+
+
+
+
+
+
+
+
+
+//  529 扫雷游戏
+
+
+
+
+
+
+
+
+
+
+// 第一次，扫到雷，结束
+
+
+// 第一次，没扫到雷，
+//  全部扫完，结束
+
+
 class Solution {
     func updateBoard(_ board: [[Character]], _ click: [Int]) -> [[Character]] {
         
@@ -71,8 +111,10 @@ class Solution {
                     }
                 }
             }
-            result.debug()
-            print("\n")
+          //  print(action)
+         //   result.debug()
+         //   print(actionQueue)
+          //  print("\n")
         }
         
         
