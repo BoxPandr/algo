@@ -45,35 +45,32 @@ class Solution {
     func predict(theWinner nums: [Int], which turn: Bool) -> ( scoreLhs: Int, scoreRhs: Int){
         let length = nums.count
         guard length > 3 else {
-            var i = 0
+            var i = 0, j = 0, oneTurn = turn
             var lhs = 0
             var rhs = 0
-            var verify = 1
-            if turn{
-                verify = 0
-            }
-            while i < length{
-                if nums[i] > nums[length - 1 - i]{
-                    
-                    if i%2 == verify{
-                       // lhs += nums[i]
+
+            while i < length - j{
+                if nums[i] > nums[length - 1 - j]{
+                    if oneTurn{
+                        lhs += nums[i]
                     }
                     else{
-                      //  rhs += nums[i]
+                        rhs += nums[i]
                     }
+                    i += 1
                 }
                 else{
-                    
-                    if i%2 == verify{
-                     //   lhs += nums[length - 1 - i]
+                    if oneTurn{
+                        lhs += nums[length - 1 - j]
                     }
                     else{
-                      //  rhs += nums[length - 1 - i]
+                        rhs += nums[length - 1 - j]
                     }
+                    j += 1
                 }
-                i += 1
+                oneTurn.toggle()
             }
-            print(lhs, rhs)
+        //    print(lhs, rhs)
             return (lhs, rhs)
         }
         let left = Array(nums[1...])
