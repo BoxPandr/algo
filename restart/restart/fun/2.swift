@@ -36,7 +36,7 @@ class Solution {
     func PredictTheWinner(_ nums: [Int]) -> Bool {
         
         let result = predict(theWinner: nums, which: true)
-        
+       // print(result)
         return result.scoreLhs >= result.scoreRhs
     }
     
@@ -52,26 +52,28 @@ class Solution {
             if turn{
                 verify = 0
             }
-            while i < length - 1 - i{
+            while i < length{
                 if nums[i] > nums[length - 1 - i]{
+                    
                     if i%2 == verify{
-                        lhs += nums[i]
+                       // lhs += nums[i]
                     }
                     else{
-                        rhs += nums[i]
+                      //  rhs += nums[i]
                     }
                 }
                 else{
+                    
                     if i%2 == verify{
-                        lhs += nums[length - 1 - i]
+                     //   lhs += nums[length - 1 - i]
                     }
                     else{
-                        rhs += nums[length - 1 - i]
+                      //  rhs += nums[length - 1 - i]
                     }
                 }
                 i += 1
             }
-            
+            print(lhs, rhs)
             return (lhs, rhs)
         }
         let left = Array(nums[1...])
