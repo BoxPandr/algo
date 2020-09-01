@@ -15,7 +15,7 @@ let s = Solution()
 
 var src = [1, 5, 2]
 
-src = [1, 5, 233, 7]
+// src = [1, 5, 233, 7]
 var result = s.PredictTheWinner(src)
 
 print(result)
