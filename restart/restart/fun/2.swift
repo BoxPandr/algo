@@ -39,7 +39,7 @@ class Solution {
     func PredictTheWinner(_ nums: [Int]) -> Bool {
         
         let result = predict(theWinner: nums, which: true)
-      //  print(result)
+        print(result)
         return result.scoreLhs >= result.scoreRhs
     }
     
@@ -53,7 +53,7 @@ class Solution {
             var rhs = 0
 
             while i < length - j{
-                if nums[i] > nums[length - 1 - j]{
+                if nums[i] >= nums[length - 1 - j]{
                     if oneTurn{
                         lhs += nums[i]
                     }
@@ -73,18 +73,18 @@ class Solution {
                 }
                 oneTurn.toggle()
             }
-           // print(lhs, rhs)
+            print(lhs, rhs)
             return (lhs, rhs)
         }
         let left = Array(nums[1...])
         let lhs = predict(theWinner: left, which: !turn)
         let right = Array(nums[..<(length-1)])
         let rhs = predict(theWinner: right, which: !turn)
-//        print("lhs.scoreLhs + nums[0]")
-//        print(lhs.scoreLhs + nums[0])
-//
-//        print("rhs.scoreRhs + nums[length-1]")
-//        print(rhs.scoreRhs + nums[length-1])
+        print("lhs.scoreLhs + nums[0]")
+        print(lhs.scoreLhs + nums[0])
+
+        print("rhs.scoreRhs + nums[length-1]")
+        print(rhs.scoreRhs + nums[length-1])
         if lhs.scoreLhs + nums[0] >= rhs.scoreRhs + nums[length-1]{
             return (lhs.scoreLhs + nums[0], lhs.scoreRhs)
         }
