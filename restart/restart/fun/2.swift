@@ -16,42 +16,21 @@ import Foundation
 class Solution {
     
     // 简单的 greedy 是不行的
+    
+    // 建立模型，使用递归
+    
+    
+    // 赢面，还是挺大的，
+    // 除非确定拿不到，必胜的牌
+    
+    
+    
+    // 三个元素吗，出结果
+    // 超过 3 个，动态规划
     func PredictTheWinner(_ nums: [Int]) -> Bool {
         
         
-        guard nums.count >= 2 else {
-            return true
-        }
         
-        var temp = nums
-        var pOne = 0
-        var pTwo = 0
-        var actionOne = true
-        while 0 < (temp.count - 1){
-            if temp[0] > temp[temp.count - 1]{
-                if actionOne{
-                    pOne += temp[0]
-                }
-                else{
-                    pTwo += temp[0]
-                }
-                temp.removeFirst()
-            }
-            else{
-                if actionOne{
-                    pOne += temp[temp.count - 1]
-                }
-                else{
-                    pTwo += temp[temp.count - 1]
-                }
-                temp.removeLast()
-            }
-            actionOne.toggle()
-        }
-        
-        
-        
-        
-        return pOne >= pTwo
+        return true
     }
 }
