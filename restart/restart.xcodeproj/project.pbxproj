@@ -34,6 +34,7 @@
 		26B93FD624E13D360057AF38 /* E.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B93FD524E13D360057AF38 /* E.swift */; };
 		26C22EBD24E22C3B00330C2F /* F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C22EBC24E22C3B00330C2F /* F.swift */; };
 		26D0531C24ED29E90066BE81 /* N.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D0531B24ED29E90066BE81 /* N.swift */; };
+		26D7A6AF24FDDDF40014DE5F /* 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D7A6AE24FDDDF40014DE5F /* 2.swift */; };
 		26EF2D1C24E62D810043856E /* L.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EF2D1B24E62D810043856E /* L.swift */; };
 		26EF2D1E24E65C3A0043856E /* M.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EF2D1D24E65C3A0043856E /* M.swift */; };
 /* End PBXBuildFile section */
@@ -79,6 +80,7 @@
 		26B93FD524E13D360057AF38 /* E.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E.swift; sourceTree = "<group>"; };
 		26C22EBC24E22C3B00330C2F /* F.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = F.swift; sourceTree = "<group>"; };
 		26D0531B24ED29E90066BE81 /* N.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = N.swift; sourceTree = "<group>"; };
+		26D7A6AE24FDDDF40014DE5F /* 2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 2.swift; sourceTree = "<group>"; };
 		26EF2D1B24E62D810043856E /* L.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L.swift; sourceTree = "<group>"; };
 		26EF2D1D24E65C3A0043856E /* M.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,9 +99,10 @@
 		2613654724EE72D600A7A2D5 /* fun */ = {
 			isa = PBXGroup;
 			children = (
-				265C5D9C24FC983F0036D161 /* Tool */,
 				2613654824EE730C00A7A2D5 /* 0.swift */,
 				265C5D9F24FCAC7C0036D161 /* 1.swift */,
+				26D7A6AE24FDDDF40014DE5F /* 2.swift */,
+				265C5D9C24FC983F0036D161 /* Tool */,
 			);
 			path = fun;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				26D0531C24ED29E90066BE81 /* N.swift in Sources */,
 				265C5DA824FCFE480036D161 /* U.swift in Sources */,
 				265C5DA024FCAC7C0036D161 /* 1.swift in Sources */,
+				26D7A6AF24FDDDF40014DE5F /* 2.swift in Sources */,
 				265C5DA224FCCC2D0036D161 /* S.swift in Sources */,
 				2613654624EE6B6700A7A2D5 /* O.swift in Sources */,
 				2613654924EE730C00A7A2D5 /* 0.swift in Sources */,

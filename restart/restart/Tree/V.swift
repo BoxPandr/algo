@@ -12,7 +12,7 @@ import Foundation
 //  572. Subtree of Another Tree
 
 
-class Solution {
+class Solution_V {
     func isSubtree(_ s: TreeNode?, _ t: TreeNode?) -> Bool {
         
         
