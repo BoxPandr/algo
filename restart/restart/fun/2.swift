@@ -11,7 +11,8 @@ import Foundation
 
 //  486. 预测赢家
 
-
+// 只能两端选，二叉树
+// 二叉决策树
 
 class Solution {
     
@@ -31,12 +32,14 @@ class Solution {
     
     
     
+    
+    
     // 三个元素吗，出结果
     // 超过 3 个，动态规划
     func PredictTheWinner(_ nums: [Int]) -> Bool {
         
         let result = predict(theWinner: nums, which: true)
-       // print(result)
+      //  print(result)
         return result.scoreLhs >= result.scoreRhs
     }
     
@@ -70,18 +73,23 @@ class Solution {
                 }
                 oneTurn.toggle()
             }
-        //    print(lhs, rhs)
+           // print(lhs, rhs)
             return (lhs, rhs)
         }
         let left = Array(nums[1...])
         let lhs = predict(theWinner: left, which: !turn)
         let right = Array(nums[..<(length-1)])
         let rhs = predict(theWinner: right, which: !turn)
+//        print("lhs.scoreLhs + nums[0]")
+//        print(lhs.scoreLhs + nums[0])
+//
+//        print("rhs.scoreRhs + nums[length-1]")
+//        print(rhs.scoreRhs + nums[length-1])
         if lhs.scoreLhs + nums[0] >= rhs.scoreRhs + nums[length-1]{
             return (lhs.scoreLhs + nums[0], lhs.scoreRhs)
         }
         else{
-            return (rhs.scoreRhs + nums[length-1], rhs.scoreLhs)
+            return (rhs.scoreRhs + nums[length-1], rhs.scoreRhs)
         }
         
     }

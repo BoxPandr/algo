@@ -111,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				263FC4AA24DBF3BC00E1086C /* restart */,
-				263FC4A924DBF3BC00E1086C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +120,7 @@
 				263FC4A824DBF3BC00E1086C /* restart */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		263FC4AA24DBF3BC00E1086C /* restart */ = {
@@ -129,6 +129,7 @@
 				2613654724EE72D600A7A2D5 /* fun */,
 				2683F3F724DCF992000953AC /* Tree */,
 				263FC4AB24DBF3BC00E1086C /* main.swift */,
+				263FC4A924DBF3BC00E1086C /* Products */,
 			);
 			path = restart;
 			sourceTree = "<group>";
