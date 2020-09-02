@@ -14,7 +14,7 @@ import Foundation
 // 只能两端选，二叉树
 // 二叉决策树
 
-class Solution {
+class Solution_2 {
     
     // 简单的 greedy 是不行的
     
@@ -109,3 +109,11 @@ class Solution {
 
 
 // 递归，就是一棵树
+
+
+
+
+// 模拟人的行为
+
+
+// 比一般下棋的，强多了
