@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+
+
+class Solution__c {
+    func findLengthOfShortestSubarray(_ arr: [Int]) -> Int {
+        
+        
+        
+        return 0
+    }
+}

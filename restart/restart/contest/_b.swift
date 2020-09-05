@@ -32,50 +32,32 @@ class Solution__b {
         
         while i < j {
             var left = 0, right = 0
-            var hasWrite = false
+           
             while i < j, left < part{
                 if let val = Int(String(s[s.index(begin, offsetBy: i)])){
                     left += val
                     i += 1
-                    hasWrite = true
+                  
                 }
             }
-            if hasWrite{
-                i -= 1
-                if let val = Int(String(s[s.index(begin, offsetBy: i)])){
-                    left -= val
-                }
-            }
+        
 
             
             while i < j {
                
-                hasWrite = false
+             
                 while i < j, right < part{
                     
                     if let val = Int(String(s[s.index(begin, offsetBy: j)])){
                         right += val
                         
                         j -= 1
-                        hasWrite = true
+                        
                        
                     }
                 }
-                if hasWrite{
-                    
-                    
-                    j += 1
-                    print(i , j)
-                    result += 1
-                    if let val = Int(String(s[s.index(begin, offsetBy: j)])){
-                        right -= val
-                    }
-                   
-                }
-                
-                
-                
-                
+                print(i , j)
+                result += 1
                 j -= 1
             }
             j = count - 1
