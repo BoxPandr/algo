@@ -36,7 +36,7 @@ src = "1 "
 let ss = Solution__b()
 
 var source = "10101"
-
+source = "0000"
 let result = ss.numWays(source)
 
 print("\n")

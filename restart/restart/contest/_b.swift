@@ -16,56 +16,36 @@ class Solution__b {
         guard count > 2 else {
             return 0
         }
-        var sum = 0
-        for piece in s{
-            if let val = Int(String(piece)){
-                sum += val
-            }
+        
+        var arr = [Int](repeating: 0, count: count)
+        var i = 0
+        if let val = Int(String(s[s.index(s.startIndex, offsetBy: i)])){
+            arr[0] = val
         }
-        guard sum % 3 == 0 else {
+        
+        while i < count - 1 {
+            if let val = Int(String(s[s.index(s.startIndex, offsetBy: i)])){
+                arr[i + 1] = arr[i] + val
+            }
+            i += 1
+        }
+        guard arr[count - 1] % 3 == 0 else {
             return 0
         }
-        var result = 0
-        var i = 0, j = count - 1
-        let part = sum / 3
-        let begin = s.startIndex
-        
-        while i < j {
-            var left = 0, right = 0
-           
-            while i < j, left < part{
-                if let val = Int(String(s[s.index(begin, offsetBy: i)])){
-                    left += val
-                    i += 1
-                  
-                }
+        i = 0
+        var lhs = 0
+        var rhs = 0
+        let equal = arr[count - 1] / 3
+        while i < count{
+            if arr[i] == equal * 2{
+                lhs += 1
             }
-        
-
-            
-            while i < j {
-               
-             
-                while i < j, right < part{
-                    
-                    if let val = Int(String(s[s.index(begin, offsetBy: j)])){
-                        right += val
-                        
-                        j -= 1
-                        
-                       
-                    }
-                }
-                print(i , j)
-                result += 1
-                j -= 1
+            if arr[i] == equal * 3{
+                rhs += 1
             }
-            j = count - 1
             i += 1
         }
         
-        
-        
-        return result
+        return lhs * rhs % 1000_000_007
     }
 }
