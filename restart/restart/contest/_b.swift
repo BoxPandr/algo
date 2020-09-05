@@ -17,30 +17,31 @@ class Solution__b {
             return 0
         }
         
-        var arr = [Int](repeating: 0, count: count)
+        var arr = [Int](repeating: 0, count: count + 1)
         var i = 0
-        if let val = Int(String(s[s.index(s.startIndex, offsetBy: i)])){
-            arr[0] = val
-        }
-        
-        while i < count - 1 {
+ 
+        while i < count {
             if let val = Int(String(s[s.index(s.startIndex, offsetBy: i)])){
                 arr[i + 1] = arr[i] + val
             }
             i += 1
         }
+        guard arr[count - 1] != 0 else {
+            return (count - 1) * (count - 2) / 2
+        }
         guard arr[count - 1] % 3 == 0 else {
             return 0
         }
+        
         i = 0
         var lhs = 0
         var rhs = 0
         let equal = arr[count - 1] / 3
         while i < count{
-            if arr[i] == equal * 2{
+            if arr[i] == equal{
                 lhs += 1
             }
-            if arr[i] == equal * 3{
+            if arr[i] == equal * 2{
                 rhs += 1
             }
             i += 1
