@@ -27,6 +27,17 @@ let s = Solution()
 
 var src = "+100"
 src = "1 "
-var result = s.isNumber(src)
+// var result = s.isNumber(src)
 
+// print(result)
+
+
+
+let ss = Solution__b()
+
+var source = "10101"
+
+let result = ss.numWays(source)
+
+print("\n")
 print(result)

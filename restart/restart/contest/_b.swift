@@ -7,3 +7,63 @@
 //
 
 import Foundation
+
+
+
+class Solution__b {
+    func numWays(_ s: String) -> Int {
+        let count = s.count
+        guard count > 2 else {
+            return 0
+        }
+        var sum = 0
+        for piece in s{
+            if let val = Int(String(piece)){
+                sum += val
+            }
+        }
+        guard sum % 3 == 0 else {
+            return 0
+        }
+        var result = 0
+        var i = 0, j = count - 1
+        let part = sum / 3
+        let begin = s.startIndex
+        
+        while i < j {
+            j = count - 1
+            var left = 0
+            var isOK = false
+            while i < j, left < part{
+                if let val = Int(String(s[s.index(begin, offsetBy: i)])){
+                    left += val
+                    i += 1
+                }
+            }
+            if left == part{
+                isOK = true
+            }
+            while i < j {
+                var right = 0
+                
+                while i < j, right < part{
+                    
+                    if let val = Int(String(s[s.index(begin, offsetBy: j)])){
+                        right += val
+                        j -= 1
+                    }
+                }
+                if isOK, right == part{
+                    print(i , j)
+                    result += 1
+                }
+                j -= 1
+            }
+            i += 1
+        }
+        
+        
+        
+        return result
+    }
+}
