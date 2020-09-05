@@ -31,8 +31,7 @@ class Solution__b {
         let begin = s.startIndex
         
         while i < j {
-            var left = 0
-            var isOK = false
+            var left = 0, right = 0
             var hasWrite = false
             while i < j, left < part{
                 if let val = Int(String(s[s.index(begin, offsetBy: i)])){
@@ -43,29 +42,40 @@ class Solution__b {
             }
             if hasWrite{
                 i -= 1
+                if let val = Int(String(s[s.index(begin, offsetBy: i)])){
+                    left -= val
+                }
             }
-            if left == part{
-                isOK = true
-            }
+
             
             while i < j {
-                var right = 0
+               
                 hasWrite = false
                 while i < j, right < part{
                     
                     if let val = Int(String(s[s.index(begin, offsetBy: j)])){
                         right += val
+                        
                         j -= 1
                         hasWrite = true
+                       
                     }
                 }
                 if hasWrite{
+                    
+                    
                     j += 1
-                }
-                if isOK, right == part{
                     print(i , j)
                     result += 1
+                    if let val = Int(String(s[s.index(begin, offsetBy: j)])){
+                        right -= val
+                    }
+                   
                 }
+                
+                
+                
+                
                 j -= 1
             }
             j = count - 1
