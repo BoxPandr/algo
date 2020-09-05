@@ -26,17 +26,17 @@ class Solution__b {
             }
             i += 1
         }
-        guard arr[count - 1] != 0 else {
+        guard arr[count] != 0 else {
             return (count - 1) * (count - 2) / 2
         }
-        guard arr[count - 1] % 3 == 0 else {
+        guard arr[count] % 3 == 0 else {
             return 0
         }
         
         i = 0
         var lhs = 0
         var rhs = 0
-        let equal = arr[count - 1] / 3
+        let equal = arr[count] / 3
         while i < count{
             if arr[i] == equal{
                 lhs += 1
