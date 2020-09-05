@@ -38,5 +38,7 @@ class Solution_L {
     
     func test(){
         
+        
+        
     }
 }
