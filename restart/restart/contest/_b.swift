@@ -19,11 +19,14 @@ class Solution__b {
         
         var arr = [Int](repeating: 0, count: count + 1)
         var i = 0
- 
+        var index = s.startIndex
         while i < count {
-            if let val = Int(String(s[s.index(s.startIndex, offsetBy: i)])){
-                arr[i + 1] = arr[i] + val
+            var val = 0
+            if s[index] == "1"{
+                val = 1
             }
+            arr[i + 1] = arr[i] + val
+            index = s.index(after: index)
             i += 1
         }
         guard arr[count] != 0 else {
