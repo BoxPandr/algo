@@ -56,7 +56,22 @@ var sr_c = "?zs"
 
 // sr_c = "??yw?ipkj?"
 // sr_c = "jgywjipkj?"
-let resul_t = x.modifyString(sr_c)
+// let resul_t = x.modifyString(sr_c)
 
 
-print(resul_t)
+// print(resul_t)
+
+
+
+
+let xxx = Solution__e()
+
+var ssL = [7,4]
+
+var ssR = [5,2,8,9]
+
+
+let gg = xxx.numTriplets(ssL, ssR)
+
+
+print(gg)
