@@ -67,9 +67,9 @@ var sr_c = "?zs"
 let xxx = Solution__e()
 
 var ssL = [7,4]
-
+ssL = [1,1]
 var ssR = [5,2,8,9]
-
+ssR = [1,1,1]
 
 let gg = xxx.numTriplets(ssL, ssR)
 

@@ -61,40 +61,8 @@ class Solution__e {
         var result = 0
         var least = 0
         let mapLhsCount = mapLeft.count
-        
-        for piece in left{
-            let std = piece * piece
-            var bang = false
-            j = least
-            while j < mapLhsCount {
-                
-                
-                if std >= mapLeft[j]{
-                    if bang == false{
-                        bang = true
-                        least = j
-                    }
-                }
-                else{
-                    j+=1
-                    continue
-                }
-                if std == mapLeft[j]{
-                    
-                    result += 1
-                    
-                }
-                j += 1
-            }
-            
-            
-            
-            
-        }
-        least = 0
         let mapRhsCount = mapRight.count
-        
-        for piece in right{
+        for piece in left{
             let std = piece * piece
             var bang = false
             j = least
@@ -112,6 +80,38 @@ class Solution__e {
                     continue
                 }
                 if std == mapRight[j]{
+                    
+                    result += 1
+                    
+                }
+                j += 1
+            }
+            
+            
+            
+            
+        }
+        least = 0
+        print(result)
+        
+        for piece in right{
+            let std = piece * piece
+            var bang = false
+            j = least
+            while j < mapLhsCount {
+                
+                
+                if std >= mapLeft[j]{
+                    if bang == false{
+                        bang = true
+                        least = j
+                    }
+                }
+                else{
+                    j+=1
+                    continue
+                }
+                if std == mapLeft[j]{
                     
                     result += 1
                     
