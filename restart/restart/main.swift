@@ -43,4 +43,17 @@ source = "10101"
 let result = ss.numWays(source)
 
 print("\n")
-print(result)
+//  print(result)
+
+
+
+let x = Solution__d()
+
+var sr_c = "?zs"
+
+
+
+let resul_t = x.modifyString(sr_c)
+
+
+print(resul_t)
