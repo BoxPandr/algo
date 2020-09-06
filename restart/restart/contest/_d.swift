@@ -46,8 +46,13 @@ class Solution__d {
                 j+=1
             }
             
-            if writes, i > 0{
-                slide.append(arr[i - 1])
+            if writes{
+                if i > 0{
+                    slide.insert(arr[i - 1], at: 0)
+                }
+                if j < count{
+                    slide.append(arr[j])
+                }
             }
             
             
@@ -67,7 +72,12 @@ class Solution__d {
                 
                 k += 1
             }
-            arr.replaceSubrange(i...(i + slide.count), with: slide)
+            var start = i
+            if start > 0{
+                start -= 1
+            }
+            
+            arr.replaceSubrange(start..<(start + slide.count), with: slide)
             
             
             
