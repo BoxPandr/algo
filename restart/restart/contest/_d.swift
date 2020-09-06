@@ -48,6 +48,84 @@ class Solution__d {
             
             var set = Set(letters)
             var slide = [String.Element]()
+            var assist = [String.Element]()
+            var writes = false
+            if j < count, arr[j] == "?"{
+                
+                writes = true
+                
+                slide.append(arr[j])
+                
+                
+                j+=1
+            }
+            
+            if writes{
+                if i > 0{
+                    assist.append(arr[i - 1])
+                }
+                if j < count{
+                    assist.append(arr[j])
+                }
+            }
+            
+            
+            var k = 0
+            
+            for piece in assist{
+                set.remove(piece)
+            }
+    
+            
+            while k < slide.count{
+                slide[k] = set[set.startIndex]
+                set.remove(slide[k])
+                k += 1
+            }
+            
+            
+            arr.replaceSubrange(i..<(i + slide.count), with: slide)
+            
+            
+            
+            i+=1
+        }
+        
+        
+        
+        return arr.map { String($0)}.joined()
+        
+        
+    }
+    
+    
+    
+    func modifyString_poor(_ s: String) -> String {
+        let count = s.count
+        guard count > 0 else{
+            return ""
+        }
+        
+        var arr = Array(s)
+        let aScalars = "a".unicodeScalars
+        let aCode = aScalars[aScalars.startIndex].value
+        
+        let letters: [Character] = (0..<26).map {
+            i in
+            Character(Unicode.Scalar(aCode + i) ?? aScalars[aScalars.startIndex])
+        }
+        
+        
+        var i = 0
+        while i < count {
+            
+            
+            
+            var j = i
+            
+            
+            var set = Set(letters)
+            var slide = [String.Element]()
             var writes = false
             if j < count, arr[j] == "?"{
                 
