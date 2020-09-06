@@ -8,7 +8,20 @@
 
 import Foundation
 
+
+// 思路是还原操作
+
+// slide 是 x???y
+
+// y?, 需要特殊处理
+
+
+
+
+
 class Solution__d {
+    
+    
     func modifyString(_ s: String) -> String {
         let count = s.count
         guard count > 0 else{
@@ -57,25 +70,34 @@ class Solution__d {
             
             
             var k = 0
+            
+            
+            var start = i
+            if start > 0{
+                start -= 1
+            }
+            var end = slide.count - 1
             if writes{
                 if i > 0{
                     set.remove(slide[0])
                     k = 1
                 }
-                set.remove(slide[slide.count - 1])
+                if j < count{
+                    set.remove(slide[slide.count - 1])
+                }
+                else{
+                    end += 1
+                }
             }
             
-            while k < slide.count - 1{
+            while k < end{
                 slide[k] = set[set.startIndex]
                 
                 set.remove(slide[k])
                 
                 k += 1
             }
-            var start = i
-            if start > 0{
-                start -= 1
-            }
+            
             
             arr.replaceSubrange(start..<(start + slide.count), with: slide)
             
