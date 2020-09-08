@@ -26,27 +26,31 @@ class Solution_V {
         }
         
         
-        var met = false
+        var sources = [TreeNode]()
         while queue.isEmpty == false {
             let node = queue.removeFirst()
             if node.val == first{
-                queue.removeAll()
-                queue.append(node)
-                met = true
-                break
+                sources.append(node)
             }
-            else{
-                if let lhs = node.left{
-                    queue.append(lhs)
-                }
-                if let rhs = node.right{
-                    queue.append(rhs)
-                }
+            if let lhs = node.left{
+                queue.append(lhs)
+            }
+            if let rhs = node.right{
+                queue.append(rhs)
             }
         }
-        if met {    }else {
-            return false
+        print(sources)
+        for ele in sources{
+            if check(parent: ele, kid: child){
+                return true
+            }
         }
+        return false
+    }
+    
+    
+    func check(parent p: TreeNode, kid child: TreeNode) -> Bool{
+        var queue = [p]
         var childQueue = [child]
         while queue.isEmpty == false {
             let node = queue.removeFirst()
@@ -79,6 +83,10 @@ class Solution_V {
             return false
         }
     }
+    
+    
+    
+    
     
     
     func isSubtree_x(_ s: TreeNode?, _ t: TreeNode?) -> Bool {
