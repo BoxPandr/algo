@@ -9,7 +9,7 @@
 import Foundation
 
 
-class Solution {
+class Solution_3_a {
     
     
     func isNumber(_ s: String) -> Bool {
@@ -75,12 +75,12 @@ class Solution {
 
 
 
-extension Solution {
+extension Solution_3_a {
 
     
     
     func test(){
-        let s = Solution()
+        let s = Solution_3_a()
 
         var src = "+100"
         src = "1 "
@@ -90,4 +90,57 @@ extension Solution {
         
         
     }
+}
+
+enum State {
+    case initial,
+    int_sign,
+    integer,
+    point,
+    point_without_int,
+    fraction,
+    exp,
+    exp_sign,
+    exp_number,
+    end
+}
+
+enum CharType {
+    case number,
+    exp,
+    point,
+    sign,
+    space,
+    illegal
+}
+
+class Solution {
+
+    
+
+    
+ 
+
+}
+
+
+
+extension Character{
+    var charT: CharType{
+         if self >= "0", self <= "9"{
+            return .number
+        } else if self == "e" || self == "E"{
+            return .exp
+        } else if self == "."{
+            return .point
+        } else if self == "+" || self == "-"{
+            return .sign
+        } else if self == " "{
+            return .space
+        } else {
+            return .illegal
+        }
+    }
+    
+    
 }

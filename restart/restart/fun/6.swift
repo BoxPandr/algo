@@ -15,7 +15,7 @@ import Foundation
 
 // 让要处理的情况变少
 
-
+//  77  组合  
 
 class Solution_6 {
     func combine(_ n: Int, _ k: Int) -> [[Int]] {
