@@ -114,15 +114,6 @@ enum CharType {
     illegal
 }
 
-class Solution {
-
-    
-
-    
- 
-
-}
-
 
 
 extension Character{
@@ -144,3 +135,62 @@ extension Character{
     
     
 }
+
+
+
+class Solution {
+
+    // 有限， 状态机
+    
+    func isNumber(_ s: String) -> Bool {
+        let transfer: [State: [CharType: State]] = [
+            .initial: [.space: .initial,
+                       .number: .integer,
+                       .point: .point_without_int,
+                       .sign: .int_sign],
+            .int_sign: [ .number: .integer,
+                         .point: .point_without_int],
+            .integer:  [.number: .integer,
+                        .exp: .exp,
+                        .point: .point,
+                        .space: .end],
+            .point: [.number: .fraction,
+                     .exp: .exp,
+                     .space: .end],
+            .point_without_int: [.number: .fraction],
+            .fraction: [.number: .fraction,
+                        .exp: .exp,
+                        .space: .end],
+            .exp: [.number: .exp_number,
+                   .sign: .exp_sign],
+            .exp_sign: [.number: .exp_number],
+            .exp_number: [.number: .exp_number,
+                          .space: .end],
+            .end: [.space: .end]
+        ]
+        
+        
+        
+        
+    }
+    
+ 
+
+}
+
+
+//
+//        int len = s.length();
+//        State st = STATE_INITIAL;
+//
+//        for (int i = 0; i < len; i++) {
+//            CharType typ = toCharType(s[i]);
+//            if (transfer[st].find(typ) == transfer[st].end()) {
+//                return false;
+//            } else {
+//                st = transfer[st][typ];
+//            }
+//        }
+//        return st == STATE_INTEGER || st == STATE_POINT || st == STATE_FRACTION || st == STATE_EXP_NUMBER || st == STATE_END;
+//
+
