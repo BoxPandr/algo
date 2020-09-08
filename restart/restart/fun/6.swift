@@ -9,10 +9,25 @@
 import Foundation
 
 
+// 递归的精华
+
+// 就是削
+
+// 让要处理的情况变少
+
+
+
 class Solution_6 {
     func combine(_ n: Int, _ k: Int) -> [[Int]] {
-        guard n > 0, k > 0 else {
-            return []
+        guard n > 1, k > 1 else {
+            if k == 1, n > 0{
+                return (1...n).map { (i) -> [Int] in
+                    [i]
+                }
+            }
+            else{
+                return []
+            }
         }
         var result = combine(n - 1, k - 1)
         var i = 0
