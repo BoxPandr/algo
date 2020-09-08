@@ -9,6 +9,12 @@
 import Foundation
 
 
+
+//  剑指 Offer 20. 表示数值的字符串
+
+
+
+
 class Solution_3_a {
     
     
@@ -140,7 +146,7 @@ extension Character{
 
 class Solution {
 
-    // 有限， 状态机
+    // 有限， 状态自动机
     
     func isNumber(_ s: String) -> Bool {
         let transfer: [State: [CharType: State]] = [
@@ -149,48 +155,46 @@ class Solution {
                        .point: .point_without_int,
                        .sign: .int_sign],
             .int_sign: [ .number: .integer,
-                         .point: .point_without_int],
+                         .point: .point_without_int],   // sign 有符号
             .integer:  [.number: .integer,
                         .exp: .exp,
                         .point: .point,
                         .space: .end],
             .point: [.number: .fraction,
                      .exp: .exp,
-                     .space: .end],
+                     .space: .end],                 //  point，  点
             .point_without_int: [.number: .fraction],
             .fraction: [.number: .fraction,
                         .exp: .exp,
-                        .space: .end],
+                        .space: .end],              //  fraction， 浮点数
             .exp: [.number: .exp_number,
-                   .sign: .exp_sign],
+                   .sign: .exp_sign],               //  exp,   指数
             .exp_sign: [.number: .exp_number],
             .exp_number: [.number: .exp_number,
                           .space: .end],
             .end: [.space: .end]
         ]
         
+        var st = State.initial
+        var current = s.startIndex
+        let end = s.endIndex
+        while current < end {
+            let typ = s[current].charT
+            if let range = transfer[st], let next = range[typ]{
+                st = next
+            }
+            else{
+                return false
+            }
+            current = s.index(after: current)
+        }
         
-        
-        
+        let answers: [State] = [.integer, .point, .fraction,
+                                .exp_number, .end]
+        return answers.contains(st)
     }
     
  
 
 }
-
-
-//
-//        int len = s.length();
-//        State st = STATE_INITIAL;
-//
-//        for (int i = 0; i < len; i++) {
-//            CharType typ = toCharType(s[i]);
-//            if (transfer[st].find(typ) == transfer[st].end()) {
-//                return false;
-//            } else {
-//                st = transfer[st][typ];
-//            }
-//        }
-//        return st == STATE_INTEGER || st == STATE_POINT || st == STATE_FRACTION || st == STATE_EXP_NUMBER || st == STATE_END;
-//
 
