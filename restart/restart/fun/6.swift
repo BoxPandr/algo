@@ -40,4 +40,15 @@ class Solution_6 {
         
         return result
     }
+    
+    
+    func test(){
+
+        let solve = Solution_6()
+
+        let result = solve.combine(4, 2)
+
+
+        print(result)
+    }
 }
