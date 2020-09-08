@@ -71,7 +71,7 @@ extension Solution_C{
     func test(){
         let sol = Solution_C()
         var src = [1,0,1,0,1,0,1]
-        // src = [1,0,1]
+        src = [1,0,1]
         let node = src.toTree
 
         var result = sol.sumRootToLeaf(node)
