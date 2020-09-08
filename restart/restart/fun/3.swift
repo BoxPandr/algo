@@ -71,3 +71,23 @@ class Solution {
         return result
     }
 }
+
+
+
+
+extension Solution {
+
+    
+    
+    func test(){
+        let s = Solution()
+
+        var src = "+100"
+        src = "1 "
+         var result = s.isNumber(src)
+
+         print(result)
+        
+        
+    }
+}

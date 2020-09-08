@@ -191,3 +191,26 @@ class Solution__d {
         
     }
 }
+
+
+
+
+extension Solution__d {
+
+    func test(){
+        let x = Solution__d()
+
+        var sr_c = "?zs"
+
+         sr_c = "ubv?w"
+
+
+         sr_c = "??yw?ipkj?"
+         sr_c = "jgywjipkj?"
+         let resul_t = x.modifyString(sr_c)
+
+
+         print(resul_t)
+    }
+
+}

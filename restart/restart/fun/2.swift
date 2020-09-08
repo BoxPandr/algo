@@ -117,3 +117,20 @@ class Solution_2 {
 
 
 // 比一般下棋的，强多了
+
+
+
+extension Solution_2{
+    func test(){
+        
+        let s = Solution_2()
+        var src = [1, 5, 2]
+
+         src = [1, 5, 233, 7]
+        src = [1,567,1,1]
+        src = [2,4,55,6,8]
+          var result = s.PredictTheWinner(src)
+
+          print(result)
+    }
+}

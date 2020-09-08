@@ -35,6 +35,7 @@ class Solution__e {
         var i = 0, j = 0
         
         while i < lhsCount {
+            j = i
             while j < lhsCount {
                 if i != j{
                     mapLeft.append(left[i] * left[j])
@@ -46,8 +47,8 @@ class Solution__e {
         mapLeft = mapLeft.sorted()
         
         i = 0
-        j = 0
         while i < rhsCount {
+            j = i
             while j < rhsCount {
                 if i != j{
                     mapRight.append(right[i] * right[j])
@@ -92,7 +93,7 @@ class Solution__e {
             
         }
         least = 0
-        print(result)
+     //   print(result)
         
         for piece in right{
             let std = piece * piece
@@ -126,5 +127,26 @@ class Solution__e {
         
         
         return result
+    }
+}
+
+
+
+
+extension Solution__e{
+    func test(){
+        
+        let xxx = Solution__e()
+
+        var ssL = [7,4]
+        ssL = [1,1]
+        var ssR = [5,2,8,9]
+        ssR = [1,1,1]
+
+        let gg = xxx.numTriplets(ssL, ssR)
+
+
+        print(gg)
+        
     }
 }
