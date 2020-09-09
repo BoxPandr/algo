@@ -99,14 +99,22 @@ class Solution__5{
             
             // 不包含
             let apart = combinationSum(possible, target)
-//            print("apart")
-//            print(apart)
-            results.append(contentsOf: apart)
+            if apart.isEmpty == false{
+                print("possible")
+                print(possible)
+                print("apart")
+                print(apart)
+                print("target")
+                print(target)
+                print("\n")
+                results.append(contentsOf: apart)
+            }
+            
             
         }
         
         
-        results = Array(Set(results))
+       // results = Array(Set(results))
         
         
         return results
