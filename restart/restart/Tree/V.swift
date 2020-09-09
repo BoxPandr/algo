@@ -84,12 +84,16 @@ class Solution_V {
         }
     }
     
+}
     
     
     
+
+
+extension Solution_V{
     
     
-    func isSubtree_x(_ s: TreeNode?, _ t: TreeNode?) -> Bool {
+    func isSubtree_wrong(_ s: TreeNode?, _ t: TreeNode?) -> Bool {
         
         guard let parent = s, let child = t else {
             return true
@@ -149,5 +153,30 @@ class Solution_V {
         else{
             return false
         }
+    }
+}
+
+
+
+
+extension Solution_V{
+    func test(){
+        let solve = Solution_V()
+
+        var base: [Int?] = [3,4,5,1,2]
+
+        // base = [3,4,5,1,2, nil, nil, nil, nil , 0]
+        // base = [1, 1]
+        var child = [4, 1, 2]
+        // child = [1]
+        guard let p = base.toTree, let c = child.toTree else{
+            fatalError()
+        }
+        // print(p)
+
+        // print(c)
+        let result = solve.isSubtree(p, c)
+
+        print(result)
     }
 }

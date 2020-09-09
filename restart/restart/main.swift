@@ -10,26 +10,20 @@ import Foundation
 
 
 
-let solve = Solution_V()
 
-var base: [Int?] = [3,4,5,1,2]
 
-// base = [3,4,5,1,2, nil, nil, nil, nil , 0]
-// base = [1, 1]
-var child = [4, 1, 2]
-// child = [1]
-guard let p = base.toTree, let c = child.toTree else{
-    fatalError()
-}
-// print(p)
+let solve = Solution__5()
 
-// print(c)
-let result = solve.isSubtree(p, c)
+var src = [2,3,6,7]
+
+
+var target = 7
+
+
+let result = solve.combinationSum(src, target)
+
 
 print(result)
-
-
-
 
 
 
