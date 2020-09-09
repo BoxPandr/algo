@@ -47,23 +47,30 @@ class Solution__5{
         }
         var met = false
         for piece in candidates{
-            if piece < target{
+            if piece <= target{
                 met = true
             }
         }
         guard met else {
             return []
         }
+        // 前面是终止条件
+        
+        
+        
+        
         
         var possible = candidates.sorted()
-        print(possible)
-        print(target)
-        print("\n")
+    //    print(possible)
+    //    print(target)
+    //    print("\n")
         var results = [[Int]]()
         while possible.isEmpty == false {
             let last = possible.removeLast()
             
             var i = 1
+            
+            // 这里有一个分支操作
             inner: while i * last <= target {
                 let current = i * last
                 switch target ¥ current {
@@ -72,26 +79,34 @@ class Solution__5{
                 case .equal:
                     results.append([Int](repeating: last, count: i))
                 case .big:
-                    let contain = combinationSum(possible, target - current)
+                    // 包含
+                    var contain = combinationSum(possible, target - current)
+               //     print("contain")
+              //      print(contain)
                     if contain.isEmpty == false{
-                        results.append(contentsOf: contain)
+                        
                         var j = 0
-                        while j < results.count {
-                            results[j].append(contentsOf: [Int](repeating: last, count: i))
+                        while j < contain.count {
+                            contain[j].append(contentsOf: [Int](repeating: last, count: i))
                             j += 1
                         }
+                        results.append(contentsOf: contain)
                     }
                 }
                 
                 i += 1
             }
+            
+            // 不包含
             let apart = combinationSum(possible, target)
+//            print("apart")
+//            print(apart)
             results.append(contentsOf: apart)
             
         }
         
         
-        
+        results = Array(Set(results))
         
         
         return results
