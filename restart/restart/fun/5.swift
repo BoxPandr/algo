@@ -96,21 +96,7 @@ class Solution__5{
                 
                 i += 1
             }
-            
-            // 不包含
-            let apart = combinationSum(possible, target)
-            if apart.isEmpty == false{
-                print("possible")
-                print(possible)
-                print("apart")
-                print(apart)
-                print("target")
-                print(target)
-                print("\n")
-                results.append(contentsOf: apart)
-            }
-            
-            
+
         }
         
         
