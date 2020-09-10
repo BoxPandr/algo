@@ -25,11 +25,11 @@ class Solution__7{
             }
             i -= 1
         }
-        print("backup")
-        print(backup)
-        print("target")
-        print(target)
-        print("\n")
+//        print("backup")
+//        print(backup)
+//        print("target")
+//        print(target)
+//        print("\n")
         
         guard backup.count > 1, target > 0 else {
             if backup.count == 1, target == backup[0]{
@@ -74,14 +74,14 @@ class Solution__7{
                     case .big:
                         // 包含
                         var contain = combinationSum2(backup, target - last)
-                        print("\n")
-                        print("backup")
-                        print(backup)
-                        print("target - last")
-                        print(target - last)
-                        print("contain")
-                        print(contain)
-                        print("\n")
+//                        print("\n")
+//                        print("backup")
+//                        print(backup)
+//                        print("target - last")
+//                        print(target - last)
+//                        print("contain")
+//                        print(contain)
+//                        print("\n")
                         if contain.isEmpty == false{
                             
                             var j = 0
@@ -109,4 +109,37 @@ class Solution__7{
         
         
     }
+}
+
+
+
+
+
+
+
+extension Solution__7{
+    func test(){
+        let solve = Solution__7()
+
+        var src = [10,1,2,7,6,1,5]
+
+        // src = [2,5,2,1,2]
+
+        //  src = [1, 2, 2]
+
+
+        var target = 8
+
+        // target = 5
+
+        //  target = 3
+
+        let result = solve.combinationSum2(src, target)
+
+        print(result)
+
+    }
+    
+    
+    
 }

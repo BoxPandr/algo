@@ -31,6 +31,7 @@
 		26A5A32624EFD097002F82F3 /* P.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A5A32524EFD097002F82F3 /* P.swift */; };
 		26A5A32824EFD588002F82F3 /* Q.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A5A32724EFD588002F82F3 /* Q.swift */; };
 		26B4A89F24E30C78002B6E87 /* G.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B4A89E24E30C78002B6E87 /* G.swift */; };
+		26B7B530250A291D0073F21E /* Op.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B7B52F250A291D0073F21E /* Op.swift */; };
 		26B93FD424E121750057AF38 /* D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B93FD324E121750057AF38 /* D.swift */; };
 		26B93FD624E13D360057AF38 /* E.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B93FD524E13D360057AF38 /* E.swift */; };
 		26C22EBD24E22C3B00330C2F /* F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C22EBC24E22C3B00330C2F /* F.swift */; };
@@ -102,6 +103,7 @@
 		26A5A32524EFD097002F82F3 /* P.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P.swift; sourceTree = "<group>"; };
 		26A5A32724EFD588002F82F3 /* Q.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q.swift; sourceTree = "<group>"; };
 		26B4A89E24E30C78002B6E87 /* G.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = G.swift; sourceTree = "<group>"; };
+		26B7B52F250A291D0073F21E /* Op.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Op.swift; sourceTree = "<group>"; };
 		26B93FD324E121750057AF38 /* D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D.swift; sourceTree = "<group>"; };
 		26B93FD524E13D360057AF38 /* E.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E.swift; sourceTree = "<group>"; };
 		26C22EBC24E22C3B00330C2F /* F.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = F.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				265C5D9D24FC984A0036D161 /* ArrayMore.swift */,
+				26B7B52F250A291D0073F21E /* Op.swift */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				264FA4E224E3982400945359 /* I.swift in Sources */,
 				26C22EBD24E22C3B00330C2F /* F.swift in Sources */,
 				26FB93B62503D6740043BBB7 /* 14.swift in Sources */,
+				26B7B530250A291D0073F21E /* Op.swift in Sources */,
 				26FB939C2503D5E40043BBB7 /* 4.swift in Sources */,
 				26FB93AC2503D6350043BBB7 /* Z.swift in Sources */,
 				263A50CD24F3C1160079E36B /* R.swift in Sources */,

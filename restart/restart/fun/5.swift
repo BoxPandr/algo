@@ -11,26 +11,6 @@ import Foundation
 
 //  39. 组合总和
 
-enum CompareState{
-    case big, small, equal
-}
-
-
-infix operator ¥
-
-
-func ¥(lhs: Int, rhs: Int) -> CompareState {
-    if lhs == rhs{
-        return .equal
-    }
-    else if lhs > rhs{
-        return .big
-    }
-    else{
-        return .small
-    }
-}
-
 
 
 

@@ -9,27 +9,26 @@
 import Foundation
 
 
-let solve = Solution__7()
-
-var src = [10,1,2,7,6,1,5]
-
-// src = [2,5,2,1,2]
-
-//  src = [1, 2, 2]
 
 
-var target = 8
+let solve = Solution_W()
 
-// target = 5
 
-//  target = 3
+var src = [1, nil ,3,2,4, nil ,5,6]
 
-let result = solve.combinationSum2(src, target)
+src = [1,nil,2,3,4,
+       5,nil,nil,6,7,
+       nil,8,nil,9,10,
+       nil,nil,11,nil,12,
+       nil,13,nil,nil,14]
+
+let node = src.treeN
+
+
+let result = solve.preorder(node)
+
 
 print(result)
-
-
-
 
 
 
