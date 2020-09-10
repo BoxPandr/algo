@@ -14,21 +14,35 @@ import Foundation
 
 class Solution__7{
     func combinationSum2(_ candidates: [Int], _ target: Int) -> [[Int]] {
-        
-        guard candidates.count > 1, target > 0 else {
-                if candidates.count == 1, target - candidates[0] == 0{
-                    return [candidates]
-                }
-                else{
-                    return []
-                }
-                
+        var backup = candidates.sorted()
+        var i = backup.count - 1
+        while i >= 0 {
+            if backup[i] > target{
+                backup.removeLast()
             }
+            else{
+                break
+            }
+            i -= 1
+        }
+        print("backup")
+        print(backup)
+        
+        
+        guard backup.count > 1, target > 0 else {
+            if backup.count == 1, target == backup[0]{
+                return [candidates]
+            }
+            else{
+                return []
+            }
+            
+        }
         
         
         
             var met = false
-            for piece in candidates{
+            for piece in backup{
                 if piece <= target{
                     met = true
                 }
@@ -42,13 +56,13 @@ class Solution__7{
             
             
             
-            var possible = candidates.sorted()
+            
         //    print(possible)
         //    print(target)
         //    print("\n")
             var results = [[Int]]()
-            while possible.isEmpty == false {
-                let last = possible.removeLast()
+            while backup.isEmpty == false {
+                let last = backup.removeLast()
                 
                 
                     switch target ¥ last {
@@ -58,9 +72,13 @@ class Solution__7{
                         results.append([last])
                     case .big:
                         // 包含
-                        var contain = combinationSum2(possible, target - last)
-                   //     print("contain")
-                  //      print(contain)
+                        var contain = combinationSum2(backup, target - last)
+                        print("backup")
+                        print(backup)
+                        print("target - last")
+                        print(target - last)
+                        print("contain")
+                        print(contain)
                         if contain.isEmpty == false{
                             
                             var j = 0

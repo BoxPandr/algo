@@ -9,24 +9,23 @@
 import Foundation
 
 
+let solve = Solution__7()
+
+var src = [10,1,2,7,6,1,5]
+
+src = [2,5,2,1,2]
 
 
+var target = 8
 
-let solve = Solution__5()
+target = 5
 
-var src = [2,3,6,7]
-src = [2,3,5]
-// src = [48,22,49,24,26,47,33,40,37,39,31,46,36,43,45,34,28,20,29,25,41,32,23]
 
-// src = [2, 3]
-var target = 7
-target = 8
-// target = 69
+let result = solve.combinationSum2(src, target)
 
-let result = solve.combinationSum(src, target)
-
-print("\n")
 print(result)
+
+
 
 
 
