@@ -13,13 +13,16 @@ let solve = Solution__7()
 
 var src = [10,1,2,7,6,1,5]
 
-src = [2,5,2,1,2]
+// src = [2,5,2,1,2]
+
+//  src = [1, 2, 2]
 
 
 var target = 8
 
-target = 5
+// target = 5
 
+//  target = 3
 
 let result = solve.combinationSum2(src, target)
 

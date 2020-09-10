@@ -27,11 +27,13 @@ class Solution__7{
         }
         print("backup")
         print(backup)
-        
+        print("target")
+        print(target)
+        print("\n")
         
         guard backup.count > 1, target > 0 else {
             if backup.count == 1, target == backup[0]{
-                return [candidates]
+                return [backup]
             }
             else{
                 return []
@@ -57,9 +59,8 @@ class Solution__7{
             
             
             
-        //    print(possible)
-        //    print(target)
-        //    print("\n")
+     
+            
             var results = [[Int]]()
             while backup.isEmpty == false {
                 let last = backup.removeLast()
@@ -73,12 +74,14 @@ class Solution__7{
                     case .big:
                         // 包含
                         var contain = combinationSum2(backup, target - last)
+                        print("\n")
                         print("backup")
                         print(backup)
                         print("target - last")
                         print(target - last)
                         print("contain")
                         print(contain)
+                        print("\n")
                         if contain.isEmpty == false{
                             
                             var j = 0
@@ -96,7 +99,7 @@ class Solution__7{
             }
             
             
-           // results = Array(Set(results))
+            results = Array(Set(results))
             
             
             return results
