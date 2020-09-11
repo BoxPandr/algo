@@ -9,19 +9,14 @@
 import Foundation
 
 
-let solve = Solution_8()
+
+let solve = Solution_Y()
 
 
-var num = 3
-
-var target = 7
+var src = Array(1...5)
 
 
-let result = solve.combinationSum3(num, target)
+let result = solve.diameterOfBinaryTree(src.toTree)
 
 
 print(result)
-
-
-
-

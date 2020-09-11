@@ -9,6 +9,8 @@
 import Foundation
 
 
+//  216. 组合总和 III
+
 struct Limitation {
     let src: [Int]
     let upmost: Int
@@ -48,16 +50,16 @@ class Solution_8 {
     
     private
     func combination(from src: [Int], rest k: Int, target n: Int) -> [[Int]] {
-        print("\n")
-        print("src")
-        print(src)
-        
-        print("rest")
-        print(k)
-        
-        print("target")
-        print(n)
-        print("\n")
+//        print("\n")
+//        print("src")
+//        print(src)
+//        
+//        print("rest")
+//        print(k)
+//        
+//        print("target")
+//        print(n)
+//        print("\n")
         guard k > 1, n > 0 else {
             if k == 1, n > 0{
                 let cake = src.filter({ (bullet) -> Bool in
@@ -98,7 +100,10 @@ class Solution_8 {
                 }
                 result.append(contentsOf: contain)
             case .equal:
-                result.append([ele])
+                if k == 1{
+                    result.append([ele])
+                }
+                fallthrough
             case .small:
                 break
             }
@@ -108,5 +113,24 @@ class Solution_8 {
         
         
         return result
+    }
+    
+    
+    
+    
+    
+    func test(){
+        let solve = Solution_8()
+
+
+        var num = 3
+
+        var target = 7
+        target = 9
+
+        let result = solve.combinationSum3(num, target)
+
+
+        print(result)
     }
 }
