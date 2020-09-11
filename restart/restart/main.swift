@@ -9,8 +9,18 @@
 import Foundation
 
 
+let solve = Solution_8()
 
 
+var num = 3
+
+var target = 7
+
+
+let result = solve.combinationSum3(num, target)
+
+
+print(result)
 
 
 
