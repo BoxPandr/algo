@@ -10,13 +10,15 @@ import Foundation
 
 
 
-let solve = Solution_Y()
+
+let src = [3, 9, 20, nil, nil, 15, 7]
 
 
-var src = Array(1...5)
+let solve = Solution_Z()
 
 
-let result = solve.diameterOfBinaryTree(src.toTree)
+
+let result = solve.averageOfLevels(src.toTree)
 
 
 print(result)
