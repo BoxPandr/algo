@@ -10,9 +10,15 @@ import Foundation
 
 //  79. 单词搜索
 
+
+// 指定开始，
+
+// 递归标记
+
+
 class Solution_a_a {
     
-    
+    let validChoice = [ (-1, 0), (0 , -1), (0, 1), (1, 0) ]
     
     
     
@@ -57,33 +63,35 @@ class Solution_a_a {
         
         let columnCount = board[0].count
         
-        var i = -1
-        while i <= 1{
-            var j = -1
-            while j <= 1 {
-                let cursorRow = row + i, cursorColumn = column + j
+        for choose in validChoice{
+                let cursorRow = row + choose.0, cursorColumn = column + choose.1
                 var toJudge = true
                 if cursorRow < 0 || cursorRow >= rowCount || cursorColumn < 0 || cursorColumn >= columnCount{
                     toJudge = false
                 }
-                if i == 0, j == 0{
-                    toJudge = false
-                }
+     
                 if toJudge, board[cursorRow][cursorColumn] == word[cursorIndex]{
                     var map = board
                     map[cursorRow][cursorColumn] = "1"
+//                    print("\n")
+//                    print("map")
+//                    print(map)
+//                    print("word[cursorIndex]")
+//
+//                    print(word[cursorIndex])
+//
+//
+//                    print("cursorRow")
+//                    print(cursorRow)
+//                    print("cursorColumn")
+//                    print(cursorColumn)
+//                    print("\n")
                     if exist(start: map, word, startRow: cursorRow, startColumn: cursorColumn, cursor: word.next(index: cursorIndex)){
                         return true
                         
                     }
                 }
                 
-                
-                j += 1
-            }
-            
-            
-            i += 1
         }
         
         

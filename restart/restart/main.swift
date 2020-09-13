@@ -39,15 +39,19 @@ var src: [[Character]] = [ ["A","B","C","E"],
 
 
 
-src = [["a","b"],["c","d"]]
+
 
 
 var target = "ABCCED"
+// target = "ABCB"
+
+// target = "SEE"
+
+
+src = [["a","b"],["c","d"]]
+
 target = "abcd"
 
-target = "SEE"
-
-target = "ABCB"
 
 
 let result = solve.exist(src, target)
