@@ -40,4 +40,17 @@ source = [[1,0,0],
 let answer = s.numSpecial(source)
 
 
-print(answer)
+//   print(answer)
+
+
+
+
+let sso = Solution___h()
+
+
+var sssource = [[3,12],[-2,5],[-4,1]]
+sssource = [[0,0],[2,2],[3,10],[5,2],[7,0]]
+
+let rrrr = sso.minCostConnectPoints(sssource)
+
+print(rrrr)
