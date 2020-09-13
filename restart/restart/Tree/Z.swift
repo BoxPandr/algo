@@ -44,3 +44,26 @@ class Solution_Z {
         return result
     }
 }
+
+
+
+
+
+extension Solution_Z{
+    func test(){
+        let src = [3, 9, 20, nil, nil, 15, 7]
+
+
+        let solve = Solution_Z()
+
+
+
+        let result = solve.averageOfLevels(src.toTree)
+
+
+        print(result)
+
+        
+        
+    }
+}

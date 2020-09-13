@@ -11,36 +11,9 @@ import Foundation
 
 
 
-let src = [3, 9, 20, nil, nil, 15, 7]
-
-
-let solve = Solution_Z()
 
 
 
-//  let result = solve.averageOfLevels(src.toTree)
-
-
-//  print(result)
-
-
-
-let s = Solution___f()
-
-var source = [[1,0,0],
-              [0,0,1],
-              [1,0,0]]
-
-
-source = [[1,0,0],
-          [0,1,0],
-          [0,0,1]]
-
-
-let answer = s.numSpecial(source)
-
-
-//   print(answer)
 
 
 
@@ -50,7 +23,33 @@ let sso = Solution___h()
 
 var sssource = [[3,12],[-2,5],[-4,1]]
 sssource = [[0,0],[2,2],[3,10],[5,2],[7,0]]
+//
+//let rrrr = sso.minCostConnectPoints(sssource)
+//
+//print(rrrr)
 
-let rrrr = sso.minCostConnectPoints(sssource)
 
-print(rrrr)
+
+
+let solve = Solution_a_a()
+
+var src: [[Character]] = [ ["A","B","C","E"],
+                           ["S","F","C","S"],
+                           ["A","D","E","E"]]
+
+
+
+src = [["a","b"],["c","d"]]
+
+
+var target = "ABCCED"
+target = "abcd"
+
+target = "SEE"
+
+target = "ABCB"
+
+
+let result = solve.exist(src, target)
+
+print(result)
