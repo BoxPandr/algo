@@ -18,7 +18,26 @@ let solve = Solution_Z()
 
 
 
-let result = solve.averageOfLevels(src.toTree)
+//  let result = solve.averageOfLevels(src.toTree)
 
 
-print(result)
+//  print(result)
+
+
+
+let s = Solution___f()
+
+var source = [[1,0,0],
+              [0,0,1],
+              [1,0,0]]
+
+
+source = [[1,0,0],
+          [0,1,0],
+          [0,0,1]]
+
+
+let answer = s.numSpecial(source)
+
+
+print(answer)
