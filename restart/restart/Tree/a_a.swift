@@ -14,7 +14,7 @@ import Foundation
 // 指定开始，
 
 // 递归标记
-
+// 通过污染源数据，标记
 
 class Solution_a_a {
     
@@ -98,6 +98,42 @@ class Solution_a_a {
         
         
         return false
+        
+    }
+    
+    
+    
+    
+    func test(){
+        
+
+        let solve = Solution_a_a()
+
+        var src: [[Character]] = [ ["A","B","C","E"],
+                                   ["S","F","C","S"],
+                                   ["A","D","E","E"]]
+
+
+
+
+
+
+        var target = "ABCCED"
+        // target = "ABCB"
+
+        // target = "SEE"
+
+
+        src = [["a","b"],["c","d"]]
+
+        target = "abcd"
+
+
+
+        let result = solve.exist(src, target)
+
+        print(result)
+        
         
     }
 }
