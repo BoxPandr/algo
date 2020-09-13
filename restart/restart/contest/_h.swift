@@ -9,12 +9,17 @@
 import Foundation
 
 
+
+//  5513. 连接所有点的最小费用
+
+
+
 class Solution___h {
     
     
     // 不是依次连接
     func minCostConnectPoints(_ points: [[Int]]) -> Int {
-        var count = points.count
+        let count = points.count
         guard count > 1 else {
             return 0
         }
@@ -22,31 +27,41 @@ class Solution___h {
         
         var result = 0
         
-        // i 具有任意性
-        var i = 0
-        while pointList.count > 1{
+        let pt = pointList.removeFirst()
+        var dotted = [pt]
+        
+        
+        
+        
+        while dotted.count < count{
            
-            let pt = pointList.remove(at: i)
-            
-            var j = 0, length = 0, first = true
-            count = pointList.count
             
             
-            while j < count {
-                let len = abs(pt[0] - pointList[j][0]) + abs(pt[1] - pointList[j][1])
-                if first{
-                    first = false
-                    length = len
-                    i = j
+            var i = 0, length = 0, first = true
+            let dyCount = pointList.count
+            
+            for pt in dotted{
+                var j = 0
+                while j < dyCount {
+                    let len = abs(pt[0] - pointList[j][0]) + abs(pt[1] - pointList[j][1])
+                    if first{
+                        first = false
+                        length = len
+                        i = j
+                    }
+                    else if length > len{
+                        length = len
+                        i = j
+                    }
+                    j += 1
                 }
-                else if length > len{
-                    length = len
-                    i = j
-                }
-                j += 1
+                
             }
-            print(pt)
-            print(pointList[i])
+           // print(dotted)
+          //  print(pointList[i])
+            
+            dotted.append(pointList[i])
+            pointList.remove(at: i)
             result += length
         }
         
