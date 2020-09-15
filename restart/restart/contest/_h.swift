@@ -22,13 +22,7 @@ class Solution___h {
         let len: Int
     }
     
-    
-    
-    
-    
-    
     var par: [Int]!
-    
     
     // 不是依次连接
     func minCostConnectPoints(_ points: [[Int]]) -> Int {
@@ -41,20 +35,13 @@ class Solution___h {
         var i = 0
         while i < rowCount {
             var j = i + 1
-            
             while j < rowCount {
-                if i != j{
-                    let val = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
-                    map.append(Distance(from: i, to: j, len: val))
-                }
-                
+                let val = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
+                map.append(Distance(from: i, to: j, len: val))
                 j += 1
             }
-            
-            
             i += 1
         }
-        
         // pairs， 一种对应关系
         par = Array(0..<rowCount)
         var result = 0
@@ -65,19 +52,13 @@ class Solution___h {
         let count = lookup.count
         while i < count {
             let u = lookup[i].from, v = lookup[i].to, x = find(val: u), y = find(val: v)
-            
             if x != y{
                 par[x] = y
                 result += lookup[i].len
             }
-            
-            
             i += 1
         }
-        
-        
         return result
-        
     }
     
     
