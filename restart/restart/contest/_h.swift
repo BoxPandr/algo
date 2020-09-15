@@ -54,7 +54,9 @@ class Solution___h {
             
             i += 1
         }
-        par = Array(0...rowCount)
+        
+        // pairs， 一种对应关系
+        par = Array(0..<rowCount)
         var result = 0
         i = 0
         let lookup = map.sorted { (lhs, rhs) -> Bool in
@@ -78,6 +80,8 @@ class Solution___h {
         
     }
     
+    
+    // 并查集
     // find 方法是精华
     func find(val x: Int) -> Int{
         if x == par[x]{
