@@ -25,4 +25,15 @@ class Solution__a_b {
         
         
     }
+    
+    
+    func test(){
+        let ss = Solution__a_b()
+
+        let src = [4,2,7,1,3,6,9]
+
+        let result = ss.invertTree(src.toTree)
+
+        print(result)
+    }
 }

@@ -10,11 +10,12 @@ import Foundation
 
 
 
-let ss = Solution__a_b()
+let solve = Solution__a_c()
 
-let src = [4,2,7,1,3,6,9]
+var src = [5,2,13]
 
-let result = ss.invertTree(src.toTree)
+let result = solve.convertBST(src.toTree)
+
 
 print(result)
 
