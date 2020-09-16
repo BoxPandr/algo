@@ -7,3 +7,22 @@
 //
 
 import Foundation
+
+
+class Solution__a_b {
+    
+    
+    func invertTree(_ root: TreeNode?) -> TreeNode? {
+        guard let n = root else {
+            return root
+        }
+        let lhs = n.left
+        let rhs = n.right
+        n.right = invertTree(lhs)
+        n.left = invertTree(rhs)
+        return n
+        
+        
+        
+    }
+}

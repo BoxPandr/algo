@@ -10,6 +10,13 @@ import Foundation
 
 
 
+let ss = Solution__a_b()
+
+let src = [4,2,7,1,3,6,9]
+
+let result = ss.invertTree(src.toTree)
+
+print(result)
 
 
 
@@ -17,16 +24,6 @@ import Foundation
 
 
 
-
-let sso = Solution___h()
-
-
-var sssource = [[3,12],[-2,5],[-4,1]]
-sssource = [[0,0],[2,2],[3,10],[5,2],[7,0]]
-
-let rrrr = sso.minCostConnectPoints(sssource)
-
-print(rrrr)
 
 
 
