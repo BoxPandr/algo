@@ -52,4 +52,16 @@ class Solution__a_c {
         
     }
     
+    
+    
+    func test(){
+        let solve = Solution__a_c()
+
+        var src = [5,2,13]
+
+        let result = solve.convertBST(src.toTree)
+
+
+        print(result)
+    }
 }

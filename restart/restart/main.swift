@@ -9,15 +9,21 @@
 import Foundation
 
 
+let solve = Solution__9()
 
-let solve = Solution__a_c()
 
-var src = [5,2,13]
+var src = (4,  [[1,2,3],[3,2,0],[3,1,0],[1,2,0]] , [[0,1],[2,3]])
 
-let result = solve.convertBST(src.toTree)
+
+let result = solve.unhappyFriends(src.0, src.1, src.2)
 
 
 print(result)
+
+
+
+
+
 
 
 
