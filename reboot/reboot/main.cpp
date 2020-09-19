@@ -69,12 +69,67 @@ public:
 };
 
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
+
+void test(){
     std::cout << "Hello, World!\n";
     Solution sol;
     Solution_O solve;
     
     solve.numWays("10101");
+}
+
+
+
+class Solution__A {
+public:
+    int maxSumRangeQuery(vector<int>& nums, vector<vector<int>>& requests) {
+        int count = (int) nums.size();
+        
+        if (count == 0){
+            return 0;
+        }
+        long result = 0;
+        vector<int> recordArr(count, 0);
+        
+        int length = (int) requests.size();
+        int i = 0;
+        while (i < length) {
+            vector<int> req = requests[i];
+            int j = req[0];
+            while (j <= req[1]) {
+                recordArr[j]++;
+                j++;
+            }
+            i++;
+        }
+        
+        sort(nums.begin(), nums.end(), std::greater<int>());
+        sort(recordArr.begin(), recordArr.end(), std::greater<int>());
+        i = 0;
+        int sequenceCount = (int)recordArr.size();
+        while (i < sequenceCount) {
+            result += nums[i] * recordArr[i];
+            i++;
+        }
+            
+        int answer = (int) result % 1000000007;
+        return answer;
+        
+    }
+};
+
+
+
+int main(int argc, const char * argv[]) {
+    // insert code here...
+    Solution__A sss;
+    vector<int> src = {1,2,3,4,5};
+    src = {1,2,3,4,5,6};
+    src = {1,2,3,4,5,10};
+    vector<vector<int>> choice = {{1,3},{0,1}};
+    choice = {{0, 1}};
+    choice = {{0,2},{1,3},{1,1}};
+    cout <<  sss.maxSumRangeQuery(src ,  choice)  << endl;
+    
     return 0;
 }

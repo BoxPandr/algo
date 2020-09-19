@@ -44,14 +44,24 @@ var sssssss = ( [1,2,3,4,5], [[1,3],[0,1]])
 
 let reee = ss.maxSumRangeQuery(sssssss.0, sssssss.1)
 
-print(reee)
+//  print(reee)
 
 
 
 
 
 
+let soooolute = Solution_K____()
 
+
+var sssssrc = ([3,1,4,2], 6)
+
+sssssrc = ([6,3,5,2], 9)
+
+let rrrrresult = soooolute.minSubarray(sssssrc.0, sssssrc.1)
+
+
+print(rrrrresult)
 
 
 
