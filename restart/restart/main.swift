@@ -18,13 +18,20 @@ var src = (4,  [[1,2,3],[3,2,0],[3,1,0],[1,2,0]] , [[0,1],[2,3]])
 let result = solve.unhappyFriends(src.0, src.1, src.2)
 
 
-print(result)
+// print(result)
 
 
 
 
 
+let sss = Solution_i__()
 
+var sssrc = [1,4,2,5,3]
+
+let resu = sss.sumOddLengthSubarrays(sssrc)
+
+
+print(resu)
 
 
 
