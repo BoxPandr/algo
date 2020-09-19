@@ -21,20 +21,17 @@ class Solution__j__ {
             return result
         }
         
-        var assistMap = [Int : Int]()
-        Array(0...(count - 1)).forEach {
-            assistMap[$0] = 0
-        }
-        
+        var recordArr = [Int](repeating: 0, count: count)
+      
         for rep in requests{
             let range = (rep[0])...(rep[1])
             for i in range{
-                assistMap[i]! += 1
+                recordArr[i] += 1
             }
         }
         
         let numbers = nums.sorted(by: >)
-        let sequence = assistMap.values.sorted(by: >)
+        let sequence = recordArr.sorted(by: >)
         
         var i = 0
         let sequenceCount = sequence.count
@@ -44,6 +41,6 @@ class Solution__j__ {
         }
         
         
-        return result
+        return result % 1000_000_007
     }
 }
