@@ -31,7 +31,20 @@ var sssrc = [1,4,2,5,3]
 let resu = sss.sumOddLengthSubarrays(sssrc)
 
 
-print(resu)
+// print(resu)
+
+
+
+
+
+let ss = Solution__j__()
+
+
+var sssssss = ( [1,2,3,4,5], [[1,3],[0,1]])
+
+let reee = ss.maxSumRangeQuery(sssssss.0, sssssss.1)
+
+print(reee)
 
 
 
