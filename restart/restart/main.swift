@@ -58,10 +58,19 @@ var sssssrc = ([3,1,4,2], 6)
 
 sssssrc = ([6,3,5,2], 9)
 
-let rrrrresult = soooolute.minSubarray(sssssrc.0, sssssrc.1)
+// let rrrrresult = soooolute.minSubarray(sssssrc.0, sssssrc.1)
 
 
-print(rrrrresult)
+// print(rrrrresult)
 
 
 
+let ssssssss = Solution_____l()
+
+
+var srccccc = "  this   is  a sentence "
+
+let rrrrresu = ssssssss.reorderSpaces(srccccc)
+
+
+print(rrrrresu)
