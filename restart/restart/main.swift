@@ -74,3 +74,15 @@ let rrrrresu = ssssssss.reorderSpaces(srccccc)
 
 
 print(rrrrresu)
+
+
+
+
+let ssssoooolveee = Solution_m______()
+
+
+
+var ssssrcccc = "ababccc"
+
+
+print(ssssoooolveee.maxUniqueSplit(ssssrcccc))
