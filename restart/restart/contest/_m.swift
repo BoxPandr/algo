@@ -14,6 +14,23 @@ import Foundation
 
 class Solution_m______ {
     func maxUniqueSplit(_ s: String) -> Int {
+        
+        let count = s.count
+        guard count > 0 else{
+            return 0
+        }
+        let arr = Array(s)
+        let len = maxUnique(split: arr)
+        
+        return max(len, maxUnique(split: arr.reversed()))
+        
+      
+    }
+    
+    
+    
+    func maxUnique(split s: [String.Element]) -> Int {
+        
         let count = s.count
         guard count > 0 else{
             return 0
