@@ -8,7 +8,9 @@
 
 import Foundation
 
+// 我想的太简单了， 我的是简单的策略，某一种场景
 
+// 应该是树和递归，这一种结构
 
 class Solution_m______ {
     func maxUniqueSplit(_ s: String) -> Int {
